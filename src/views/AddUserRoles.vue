@@ -38,7 +38,7 @@
           </div>
         </form>
         <div class="flex flex-col w-[392px] shrink-0 h-fit rounded-3xl p-[18px] gap-3 bg-white">
-          <p class="font-semibold">Quick Guide to Assign Role To User</p>
+          <p class="font-semibold text-lg">Quick Guide to Assign Role to User</p>
           <ul class="flex flex-col gap-4">
             <li class="flex gap-[6px]">
               <img
@@ -47,7 +47,7 @@
                 alt="icon"
               />
               <p class="font-medium leading-[140%]">
-                Select an Available Username from the List lorem ipsum simply text
+                Select an available username from the list of registered users
               </p>
             </li>
             <li class="flex gap-[6px]">
@@ -57,7 +57,7 @@
                 alt="icon"
               />
               <p class="font-medium leading-[140%]">
-                Select the Most Appropriate Role as Needed text lorem ipsum dummy
+                Choose the most appropriate role based on the user's job responsibilities
               </p>
             </li>
             <li class="flex gap-[6px]">
@@ -67,7 +67,7 @@
                 alt="icon"
               />
               <p class="font-medium leading-[140%]">
-                Review All Details Carefully Before Creating dummy image
+                Review all user details and role permissions carefully before assigning
               </p>
             </li>
             <li class="flex gap-[6px]">
@@ -77,7 +77,7 @@
                 alt="icon"
               />
               <p class="font-medium leading-[140%]">
-                Make Sure Not to Assign the Wrong Role or Permissions text lorem si ipsum
+                Double-check to avoid assigning the wrong role or permissions
               </p>
             </li>
             <li class="flex gap-[6px]">
@@ -87,7 +87,7 @@
                 alt="icon"
               />
               <p class="font-medium leading-[140%]">
-                Ensure the Role is Assigned to the Right Person color dot amet ipsum lorem
+                Ensure the role is assigned to the correct person before finalizing
               </p>
             </li>
           </ul>

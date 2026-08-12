@@ -8,7 +8,7 @@
       <img :src="icon" class="flex size-6 shrink-0" alt="icon" />
     </div>
     <p
-      class="placeholder font-medium text-monday-gray text-sm absolute -translate-y-1/2 left-[81px] top-[25px] group-has-[:invalid]:top-[36px] group-focus-within:top-[25px] transition-300"
+      class="placeholder font-medium text-monday-gray text-sm absolute -translate-y-1/2 left-[81px] top-[25px] group-has-[:placeholder-shown]:top-[36px] group-focus-within:top-[25px] transition-300"
     >
       {{ label }}
     </p>
