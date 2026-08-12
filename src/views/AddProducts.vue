@@ -103,7 +103,7 @@
           <FormSelect
             v-model="form.popularity"
             label="Popularity"
-            icon="@/assets/images/icons/strongbox-grey.svg"
+            icon="/src/assets/images/icons/strongbox-grey.svg"
             required
           >
             <option :value="true">Popular</option>
@@ -113,7 +113,7 @@
           <FormInput
             v-model="form.name"
             label="Product Name"
-            icon="@/assets/images/icons/bag-grey.svg"
+            icon="/src/assets/images/icons/bag-grey.svg"
             required="true"
             maxlength="100"
           />
@@ -121,7 +121,7 @@
           <FormInput
             v-model="form.barcode"
             label="Product Barcode"
-            icon="@/assets/images/icons/barcode-black.svg"
+            icon="/src/assets/images/icons/barcode-black.svg"
             required="true"
             maxlength="50"
           />
@@ -129,7 +129,7 @@
           <FormInput
             v-model="form.price"
             label="Product Price"
-            icon="@/assets/images/icons/moneys-grey.svg"
+            icon="/src/assets/images/icons/moneys-grey.svg"
             required="true"
             type="number"
             min="0"
@@ -139,7 +139,7 @@
           <FormSelect
             v-model="form.category"
             label="Product Category"
-            icon="@/assets/images/icons/note-2-grey.svg"
+            icon="/src/assets/images/icons/note-2-grey.svg"
             required
           >
             <option v-for="category in categories" :key="category.id" :value="category.id">
@@ -150,7 +150,7 @@
           <FormTextarea
             v-model="form.description"
             label="Product About"
-            icon="@/assets/images/icons/note-2-grey.svg"
+            icon="/src/assets/images/icons/note-2-grey.svg"
             required
             maxlength="1000"
             :show-counter="true"
@@ -171,7 +171,7 @@
           <ul class="flex flex-col gap-4">
             <li class="flex gap-[6px]">
               <img
-                src="@/assets/images/icons/Checklist-green-circle.svg"
+                src="/src/assets/images/icons/Checklist-green-circle.svg"
                 class="flex size-6 shrink-0"
                 alt="icon"
               />
@@ -181,7 +181,7 @@
             </li>
             <li class="flex gap-[6px]">
               <img
-                src="@/assets/images/icons/Checklist-green-circle.svg"
+                src="/src/assets/images/icons/Checklist-green-circle.svg"
                 class="flex size-6 shrink-0"
                 alt="icon"
               />
@@ -191,7 +191,7 @@
             </li>
             <li class="flex gap-[6px]">
               <img
-                src="@/assets/images/icons/Checklist-green-circle.svg"
+                src="/src/assets/images/icons/Checklist-green-circle.svg"
                 class="flex size-6 shrink-0"
                 alt="icon"
               />
@@ -201,7 +201,7 @@
             </li>
             <li class="flex gap-[6px]">
               <img
-                src="@/assets/images/icons/Checklist-green-circle.svg"
+                src="/src/assets/images/icons/Checklist-green-circle.svg"
                 class="flex size-6 shrink-0"
                 alt="icon"
               />
@@ -211,7 +211,7 @@
             </li>
             <li class="flex gap-[6px]">
               <img
-                src="@/assets/images/icons/Checklist-green-circle.svg"
+                src="/src/assets/images/icons/Checklist-green-circle.svg"
                 class="flex size-6 shrink-0"
                 alt="icon"
               />

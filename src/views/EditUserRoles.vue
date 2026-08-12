@@ -10,7 +10,7 @@
           <FormSelect
             v-model="formData.userId"
             label="Select User Id"
-            icon="@/assets/images/icons/profile-circle-grey.svg"
+            icon="/src/assets/images/icons/profile-circle-grey.svg"
             required
           >
             <option value="mirana1">Mirana Gaul</option>
@@ -19,7 +19,7 @@
           <FormSelect
             v-model="formData.roleId"
             label="Select Role Id"
-            icon="@/assets/images/icons/profile-tick-grey.svg"
+            icon="/src/assets/images/icons/profile-tick-grey.svg"
             required
           >
             <option value="keeper">Keeper</option>
@@ -40,7 +40,7 @@
           <ul class="flex flex-col gap-4">
             <li class="flex gap-[6px]">
               <img
-                src="@/assets/images/icons/Checklist-green-circle.svg"
+                src="/src/assets/images/icons/Checklist-green-circle.svg"
                 class="flex size-6 shrink-0"
                 alt="icon"
               />
@@ -50,7 +50,7 @@
             </li>
             <li class="flex gap-[6px]">
               <img
-                src="@/assets/images/icons/Checklist-green-circle.svg"
+                src="/src/assets/images/icons/Checklist-green-circle.svg"
                 class="flex size-6 shrink-0"
                 alt="icon"
               />
@@ -60,7 +60,7 @@
             </li>
             <li class="flex gap-[6px]">
               <img
-                src="@/assets/images/icons/Checklist-green-circle.svg"
+                src="/src/assets/images/icons/Checklist-green-circle.svg"
                 class="flex size-6 shrink-0"
                 alt="icon"
               />
@@ -70,7 +70,7 @@
             </li>
             <li class="flex gap-[6px]">
               <img
-                src="@/assets/images/icons/Checklist-green-circle.svg"
+                src="/src/assets/images/icons/Checklist-green-circle.svg"
                 class="flex size-6 shrink-0"
                 alt="icon"
               />
@@ -80,7 +80,7 @@
             </li>
             <li class="flex gap-[6px]">
               <img
-                src="@/assets/images/icons/Checklist-green-circle.svg"
+                src="/src/assets/images/icons/Checklist-green-circle.svg"
                 class="flex size-6 shrink-0"
                 alt="icon"
               />

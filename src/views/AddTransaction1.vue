@@ -8,7 +8,7 @@
       <div id="Steps" class="relative flex w-full h-[127px] rounded-3xl p-[18px] bg-white">
         <div class="relative flex flex-col w-full gap-3 items-center text-center">
           <img
-            src="@/assets/images/icons/tick-square-blue.svg"
+            src="/src/assets/images/icons/tick-square-blue.svg"
             class="size-8 flex shrink-0"
             alt="icon"
           />
@@ -21,14 +21,14 @@
           class="absolute transform -translate-y-1/2 top-[34px] left-[21.6%] h-[3px] overflow-hidden w-1/4"
         >
           <img
-            src="@/assets/images/icons/line-half-blue.svg"
+            src="/src/assets/images/icons/line-half-blue.svg"
             class="size-full object-cover object-center"
             alt="icon"
           />
         </div>
         <div class="relative flex flex-col w-full gap-3 items-center text-center">
           <img
-            src="@/assets/images/icons/tick-square-grey.svg"
+            src="/src/assets/images/icons/tick-square-grey.svg"
             class="size-8 flex shrink-0"
             alt="icon"
           />
@@ -41,14 +41,14 @@
           class="absolute transform -translate-y-1/2 top-[34px] right-[21.6%] h-[3px] overflow-hidden w-1/4"
         >
           <img
-            src="@/assets/images/icons/Line-grey.svg"
+            src="/src/assets/images/icons/Line-grey.svg"
             class="size-full object-cover object-center"
             alt="icon"
           />
         </div>
         <div class="relative flex flex-col w-full gap-3 items-center text-center">
           <img
-            src="@/assets/images/icons/tick-square-grey.svg"
+            src="/src/assets/images/icons/tick-square-grey.svg"
             class="size-8 flex shrink-0"
             alt="icon"
           />
@@ -69,7 +69,7 @@
               class="flex items-center pr-4 absolute transform -translate-y-1/2 top-1/2 left-6 border-r-[1.5px] border-monday-border"
             >
               <img
-                src="@/assets/images/icons/user-thin-grey.svg"
+                src="/src/assets/images/icons/user-thin-grey.svg"
                 class="flex size-6 shrink-0"
                 alt="icon"
               />
@@ -91,7 +91,7 @@
               class="flex items-center pr-4 absolute transform -translate-y-1/2 top-1/2 left-6 border-r-[1.5px] border-monday-border"
             >
               <img
-                src="@/assets/images/icons/call-grey.svg"
+                src="/src/assets/images/icons/call-grey.svg"
                 class="flex size-6 shrink-0"
                 alt="icon"
               />
@@ -120,7 +120,7 @@
           <div v-if="loading" class="flex items-center justify-center w-full py-8">
             <div class="flex items-center gap-3">
               <img
-                src="@/assets/images/icons/loading.svg"
+                src="/src/assets/images/icons/loading.svg"
                 class="size-6 animate-spin"
                 alt="loading"
               />
@@ -137,7 +137,7 @@
               <p class="font-semibold text-xl">{{ selectedMerchant.name }}</p>
               <p class="flex items-center gap-1 font-medium text-lg text-monday-gray">
                 <img
-                  src="@/assets/images/icons/call-grey.svg"
+                  src="/src/assets/images/icons/call-grey.svg"
                   class="size-6 flex shrink-0"
                   alt="icon"
                 />

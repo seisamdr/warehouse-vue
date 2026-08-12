@@ -4,7 +4,7 @@
       <section class="grid grid-cols-3 gap-6">
         <div id="Total-Revenue" class="flex flex-col rounded-3xl p-[18px] gap-5 bg-white">
           <div class="flex size-14 rounded-full bg-monday-blue/10 items-center justify-center">
-            <img src="@/assets/images/icons/wallet-blue-fill.svg" class="size-6" alt="icon" />
+            <img src="/src/assets/images/icons/wallet-blue-fill.svg" class="size-6" alt="icon" />
           </div>
           <div class="flex flex-col gap-[6px]">
             <p class="font-semibold text-[32px]">
@@ -16,7 +16,7 @@
         <div id="Total-Transactions" class="flex flex-col rounded-3xl p-[18px] gap-5 bg-white">
           <div class="flex size-14 rounded-full bg-monday-blue/10 items-center justify-center">
             <img
-              src="@/assets/images/icons/document-text-blue-fill.svg"
+              src="/src/assets/images/icons/document-text-blue-fill.svg"
               class="size-6"
               alt="icon"
             />
@@ -30,7 +30,7 @@
         </div>
         <div id="Products-Sold" class="flex flex-col rounded-3xl p-[18px] gap-5 bg-white">
           <div class="flex size-14 rounded-full bg-monday-blue/10 items-center justify-center">
-            <img src="@/assets/images/icons/bag-blue-fill.svg" class="size-6" alt="icon" />
+            <img src="/src/assets/images/icons/bag-blue-fill.svg" class="size-6" alt="icon" />
           </div>
           <div class="flex flex-col gap-[6px]">
             <p class="font-semibold text-[32px]">{{ formatNumber(dashboardData.productsSold) }}</p>
@@ -45,7 +45,11 @@
               <div
                 class="flex size-14 rounded-full bg-monday-lime-green items-center justify-center overflow-hidden"
               >
-                <img src="@/assets/images/icons/crown-black-fill.svg" class="size-6" alt="icon" />
+                <img
+                  src="/src/assets/images/icons/crown-black-fill.svg"
+                  class="size-6"
+                  alt="icon"
+                />
               </div>
               <p
                 class="absolute transform -translate-x-1/2 left-1/2 -bottom-2 rounded-[20px] py-1 px-2 bg-monday-black text-white w-fit font-extrabold text-[8px]"
@@ -66,7 +70,7 @@
               >
                 <p class="font-semibold">Upgrade Now</p>
                 <img
-                  src="@/assets/images/icons/arrow-right-black.svg"
+                  src="/src/assets/images/icons/arrow-right-black.svg"
                   class="flex size-6 shrink-0"
                   alt="icon"
                 />
@@ -76,7 +80,7 @@
           <div class="flex flex-col rounded-3xl p-[18px] gap-9 bg-white">
             <div class="flex size-14 rounded-full bg-monday-blue/10 items-center justify-center">
               <img
-                src="@/assets/images/icons/receive-square-blue-fill.svg"
+                src="/src/assets/images/icons/receive-square-blue-fill.svg"
                 class="size-6"
                 alt="icon"
               />
@@ -92,7 +96,7 @@
               >
                 <p class="font-semibold text-monday-blue">Download Now</p>
                 <img
-                  src="@/assets/images/icons/arrow-right-blue.svg"
+                  src="/src/assets/images/icons/arrow-right-blue.svg"
                   class="flex size-6 shrink-0"
                   alt="icon"
                 />
@@ -107,7 +111,7 @@
           <h2 class="font-bold text-xl">Lastest Transaction</h2>
           <div v-if="loading" class="flex items-center gap-2">
             <img
-              src="@/assets/images/icons/loading.svg"
+              src="/src/assets/images/icons/loading.svg"
               class="size-5 animate-spin"
               alt="loading"
             />
@@ -125,7 +129,7 @@
                   class="flex size-[86px] rounded-2xl bg-monday-background items-center justify-center overflow-hidden"
                 >
                   <img
-                    src="@/assets/images/icons/user-thin-grey.svg"
+                    src="/src/assets/images/icons/user-thin-grey.svg"
                     class="flex size-[42px] shrink-0"
                     alt="icon"
                   />
@@ -134,7 +138,7 @@
                   <p class="font-semibold text-xl">{{ transaction.name }}</p>
                   <p class="flex items-center gap-1 font-medium text-lg text-monday-gray">
                     <img
-                      src="@/assets/images/icons/call-grey.svg"
+                      src="/src/assets/images/icons/call-grey.svg"
                       class="size-6 flex shrink-0"
                       alt="icon"
                     />
@@ -143,7 +147,7 @@
                 </div>
                 <div class="flex items-center gap-[6px]">
                   <img
-                    src="@/assets/images/icons/shop-black.svg"
+                    src="/src/assets/images/icons/shop-black.svg"
                     class="size-6 flex shrink-0"
                     alt="icon"
                   />
@@ -162,7 +166,7 @@
                   <img
                     :src="
                       expandedTransaction.includes(index + 1)
-                        ? '@/assets/images/icons/arrow-circle-down.svg'
+                        ? '/src/assets/images/icons/arrow-circle-down.svg'
                         : '/src/assets/images/icons/arrow-circle-up.svg'
                     "
                     class="size-6 flex shrink-0 transition-300"
@@ -221,7 +225,7 @@
               <div class="flex items-center justify-between px-4 py-5">
                 <p class="flex items-center gap-1 font-semibold text-lg text-monday-gray">
                   <img
-                    src="@/assets/images/icons/money-grey.svg"
+                    src="/src/assets/images/icons/money-grey.svg"
                     class="size-6 flex shrink-0"
                     alt="icon"
                   />
@@ -238,7 +242,7 @@
             class="flex flex-col flex-1 items-center justify-center rounded-[20px] border-dashed border-2 border-monday-gray gap-6 py-12"
           >
             <img
-              src="@/assets/images/icons/document-text-grey.svg"
+              src="/src/assets/images/icons/document-text-grey.svg"
               class="size-[52px]"
               alt="icon"
             />
@@ -261,7 +265,7 @@
             @click="closeModal"
             class="flex size-14 rounded-full items-center justify-center bg-monday-gray-background"
           >
-            <img src="@/assets/images/icons/close-circle-black.svg" class="size-6" alt="icon" />
+            <img src="/src/assets/images/icons/close-circle-black.svg" class="size-6" alt="icon" />
           </button>
         </div>
         <div

@@ -8,7 +8,7 @@
       <div id="Steps" class="relative flex w-full h-[127px] rounded-3xl p-[18px] bg-white">
         <div class="relative flex flex-col w-full gap-3 items-center text-center">
           <img
-            src="@/assets/images/icons/tick-square-checked-blue.svg"
+            src="/src/assets/images/icons/tick-square-checked-blue.svg"
             class="size-8 flex shrink-0"
             alt="icon"
           />
@@ -21,14 +21,14 @@
           class="absolute transform -translate-y-1/2 top-[34px] left-[21.6%] h-[3px] overflow-hidden w-1/4"
         >
           <img
-            src="@/assets/images/icons/Line-blue.svg"
+            src="/src/assets/images/icons/Line-blue.svg"
             class="size-full object-cover object-center"
             alt="icon"
           />
         </div>
         <div class="relative flex flex-col w-full gap-3 items-center text-center">
           <img
-            src="@/assets/images/icons/tick-square-blue.svg"
+            src="/src/assets/images/icons/tick-square-blue.svg"
             class="size-8 flex shrink-0"
             alt="icon"
           />
@@ -41,14 +41,14 @@
           class="absolute transform -translate-y-1/2 top-[34px] right-[21.6%] h-[3px] overflow-hidden w-1/4"
         >
           <img
-            src="@/assets/images/icons/line-half-blue.svg"
+            src="/src/assets/images/icons/line-half-blue.svg"
             class="size-full object-cover object-center"
             alt="icon"
           />
         </div>
         <div class="relative flex flex-col w-full gap-3 items-center text-center">
           <img
-            src="@/assets/images/icons/tick-square-grey.svg"
+            src="/src/assets/images/icons/tick-square-grey.svg"
             class="size-8 flex shrink-0"
             alt="icon"
           />
@@ -64,7 +64,7 @@
           <div class="flex flex-col gap-[6px]">
             <p class="flex items-center gap-[6px]">
               <img
-                src="@/assets/images/icons/shopping-cart-black.svg"
+                src="/src/assets/images/icons/shopping-cart-black.svg"
                 class="size-6 flex shrink-0"
                 alt="icon"
               />
@@ -85,7 +85,7 @@
               class="btn bg-monday-blue/10 text-monday-blue font-semibold rounded-full"
             >
               <img
-                src="@/assets/images/icons/barcode-black.svg"
+                src="/src/assets/images/icons/barcode-black.svg"
                 class="flex size-6 shrink-0"
                 alt="icon"
               />
@@ -94,7 +94,7 @@
             <button @click="openAssignModal" class="btn btn-primary font-semibold">
               Assign Product
               <img
-                src="@/assets/images/icons/add-square-white.svg"
+                src="/src/assets/images/icons/add-square-white.svg"
                 class="flex size-6 shrink-0"
                 alt="icon"
               />
@@ -135,7 +135,7 @@
               <div class="flex flex-col gap-2 w-[187px] shrink-0">
                 <p class="flex items-center gap-1 font-medium text-monday-gray">
                   <img
-                    src="@/assets/images/icons/money-grey.svg"
+                    src="/src/assets/images/icons/money-grey.svg"
                     class="size-4 flex shrink-0"
                     alt="icon"
                   />
@@ -148,7 +148,7 @@
                   @click="removeProduct(product.id)"
                   class="btn bg-monday-red/10 rounded-2xl text-monday-red w-[146px] font-semibold"
                 >
-                  <img src="@/assets/images/icons/trash-red.svg" class="size-6" alt="icon" />
+                  <img src="/src/assets/images/icons/trash-red.svg" class="size-6" alt="icon" />
                   Remove
                 </button>
               </div>
@@ -159,7 +159,7 @@
             class="flex flex-col flex-1 items-center justify-center rounded-[20px] border-dashed border-2 border-monday-gray gap-6"
           >
             <img
-              src="@/assets/images/icons/document-text-grey.svg"
+              src="/src/assets/images/icons/document-text-grey.svg"
               class="size-[52px]"
               alt="icon"
             />
@@ -214,7 +214,7 @@
             @click="closeAssignModal"
             class="flex size-14 rounded-full items-center justify-center bg-monday-gray-background"
           >
-            <img src="@/assets/images/icons/close-circle-black.svg" class="size-6" alt="icon" />
+            <img src="/src/assets/images/icons/close-circle-black.svg" class="size-6" alt="icon" />
           </button>
         </div>
         <div class="modal-content flex flex-1 overflow-y-auto overscroll-contain hide-scrollbar">
@@ -223,7 +223,7 @@
             <div v-if="loadingProducts" class="flex justify-center items-center py-12">
               <div class="flex items-center gap-3">
                 <img
-                  src="@/assets/images/icons/loading.svg"
+                  src="/src/assets/images/icons/loading.svg"
                   class="size-6 animate-spin"
                   alt="loading"
                 />
@@ -237,7 +237,7 @@
               class="flex flex-col items-center justify-center py-12 gap-3"
             >
               <img
-                src="@/assets/images/icons/document-text-grey.svg"
+                src="/src/assets/images/icons/document-text-grey.svg"
                 class="size-[52px]"
                 alt="icon"
               />
@@ -249,7 +249,7 @@
               v-else-if="getAvailableProductsCount() === 0"
               class="flex flex-col items-center justify-center py-12 gap-3"
             >
-              <img src="@/assets/images/icons/trash-red.svg" class="size-[52px]" alt="icon" />
+              <img src="/src/assets/images/icons/trash-red.svg" class="size-[52px]" alt="icon" />
               <p class="font-semibold text-red-600">Semua produk merchant ini stoknya habis.</p>
               <p class="text-monday-gray text-center">
                 Silakan update stok produk terlebih dahulu sebelum melakukan transaksi.
@@ -286,7 +286,7 @@
                 </div>
                 <div class="flex items-center gap-[6px] w-[154px] shrink-0">
                   <img
-                    src="@/assets/images/icons/box-black.svg"
+                    src="/src/assets/images/icons/box-black.svg"
                     class="size-6 flex shrink-0"
                     alt="icon"
                   />
@@ -313,7 +313,7 @@
                     :disabled="product.stock <= 0"
                   >
                     <img
-                      src="@/assets/images/icons/minus-square-blue.svg"
+                      src="/src/assets/images/icons/minus-square-blue.svg"
                       class="size-6"
                       :class="{ 'opacity-50': product.stock <= 0 }"
                       alt="icon"
@@ -329,7 +329,7 @@
                     :disabled="product.stock <= 0"
                   >
                     <img
-                      src="@/assets/images/icons/add-square-blue-fill.svg"
+                      src="/src/assets/images/icons/add-square-blue-fill.svg"
                       class="size-6"
                       :class="{ 'opacity-50': product.stock <= 0 }"
                       alt="icon"
@@ -341,7 +341,7 @@
               <div class="flex items-center justify-between">
                 <p class="flex items-center gap-1 font-semibold text-monday-gray">
                   <img
-                    src="@/assets/images/icons/money-grey.svg"
+                    src="/src/assets/images/icons/money-grey.svg"
                     class="size-6 flex shrink-0"
                     alt="icon"
                   />
@@ -356,7 +356,7 @@
                 v-if="product.stock <= 0"
                 class="flex items-center gap-2 p-3 bg-red-50 border border-red-200 rounded-xl"
               >
-                <img src="@/assets/images/icons/trash-red.svg" class="size-5" alt="warning" />
+                <img src="/src/assets/images/icons/trash-red.svg" class="size-5" alt="warning" />
                 <p class="font-medium text-red-600 text-sm">
                   Produk ini tidak tersedia karena stok habis
                 </p>
@@ -388,7 +388,7 @@
             @click="closeBarcodeScanner"
             class="flex size-14 rounded-full items-center justify-center bg-monday-gray-background"
           >
-            <img src="@/assets/images/icons/close-circle-black.svg" class="size-6" alt="icon" />
+            <img src="/src/assets/images/icons/close-circle-black.svg" class="size-6" alt="icon" />
           </button>
         </div>
 
@@ -407,7 +407,7 @@
             >
               <div class="text-center text-white">
                 <img
-                  src="@/assets/images/icons/loading.svg"
+                  src="/src/assets/images/icons/loading.svg"
                   class="size-8 animate-spin mx-auto mb-2"
                   alt="loading"
                 />
@@ -503,7 +503,7 @@
               >
                 <span v-if="scanningProduct">
                   <img
-                    src="@/assets/images/icons/loading.svg"
+                    src="/src/assets/images/icons/loading.svg"
                     class="size-4 animate-spin inline mr-2"
                     alt="loading"
                   />
@@ -620,7 +620,7 @@
             <div class="mb-3 p-2 bg-green-50 border border-green-200 rounded-lg">
               <p class="text-sm text-green-700 font-medium">
                 <img
-                  src="@/assets/images/icons/barcode-black.svg"
+                  src="/src/assets/images/icons/barcode-black.svg"
                   class="size-4 inline mr-1"
                   alt="barcode"
                 />
@@ -649,7 +649,7 @@
                 </p>
                 <p class="text-xs text-monday-gray">
                   <img
-                    src="@/assets/images/icons/buildings-2-grey.svg"
+                    src="/src/assets/images/icons/buildings-2-grey.svg"
                     class="size-3 inline mr-1"
                     alt="warehouse"
                   />

@@ -32,7 +32,7 @@
             >
               <img
                 :src="imagePreview || getCategoryIcon(category.photo)"
-                data-original="@/assets/images/icons/weight-black.svg"
+                data-original="/src/assets/images/icons/weight-black.svg"
                 class="size-14 object-contain"
                 alt="icon"
               />
@@ -73,13 +73,13 @@
           <FormInput
             v-model="form.name"
             label="Category Name"
-            icon="@/assets/images/icons/note-2-grey.svg"
+            icon="/src/assets/images/icons/note-2-grey.svg"
             required="true"
           />
           <FormInput
             v-model="form.description"
             label="Category Tagline"
-            icon="@/assets/images/icons/document-grey.svg"
+            icon="/src/assets/images/icons/document-grey.svg"
             required="true"
           />
           <div class="flex items-center justify-end gap-4">
@@ -100,7 +100,7 @@
           <ul class="flex flex-col gap-4">
             <li class="flex gap-[6px]">
               <img
-                src="@/assets/images/icons/Checklist-green-circle.svg"
+                src="/src/assets/images/icons/Checklist-green-circle.svg"
                 class="flex size-6 shrink-0"
                 alt="icon"
               />
@@ -108,7 +108,7 @@
             </li>
             <li class="flex gap-[6px]">
               <img
-                src="@/assets/images/icons/Checklist-green-circle.svg"
+                src="/src/assets/images/icons/Checklist-green-circle.svg"
                 class="flex size-6 shrink-0"
                 alt="icon"
               />
@@ -118,7 +118,7 @@
             </li>
             <li class="flex gap-[6px]">
               <img
-                src="@/assets/images/icons/Checklist-green-circle.svg"
+                src="/src/assets/images/icons/Checklist-green-circle.svg"
                 class="flex size-6 shrink-0"
                 alt="icon"
               />
@@ -128,7 +128,7 @@
             </li>
             <li class="flex gap-[6px]">
               <img
-                src="@/assets/images/icons/Checklist-green-circle.svg"
+                src="/src/assets/images/icons/Checklist-green-circle.svg"
                 class="flex size-6 shrink-0"
                 alt="icon"
               />
@@ -138,7 +138,7 @@
             </li>
             <li class="flex gap-[6px]">
               <img
-                src="@/assets/images/icons/Checklist-green-circle.svg"
+                src="/src/assets/images/icons/Checklist-green-circle.svg"
                 class="flex size-6 shrink-0"
                 alt="icon"
               />

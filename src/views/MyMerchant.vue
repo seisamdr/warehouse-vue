@@ -3,7 +3,11 @@
     <main class="flex flex-col gap-6 flex-1">
       <div v-if="loading" class="flex items-center justify-center py-12">
         <div class="flex items-center gap-3">
-          <img src="@/assets/images/icons/loading.svg" class="size-6 animate-spin" alt="loading" />
+          <img
+            src="/src/assets/images/icons/loading.svg"
+            class="size-6 animate-spin"
+            alt="loading"
+          />
           <span class="font-semibold text-lg">Loading merchants...</span>
         </div>
       </div>
@@ -20,7 +24,7 @@
           <p class="font-semibold text-xl">{{ selectedMerchant.name }}</p>
           <p class="flex items-center gap-1 font-medium text-lg text-monday-gray">
             <img
-              src="@/assets/images/icons/call-grey.svg"
+              src="/src/assets/images/icons/call-grey.svg"
               class="size-6 flex shrink-0"
               alt="icon"
             />
@@ -30,7 +34,7 @@
         <div class="flex flex-col gap-2 flex-1">
           <p class="flex items-center gap-1 font-medium text-monday-gray">
             <img
-              src="@/assets/images/icons/user-grey.svg"
+              src="/src/assets/images/icons/user-grey.svg"
               class="size-4 flex shrink-0"
               alt="icon"
             />
@@ -47,7 +51,7 @@
           <div class="flex flex-col gap-[6px]">
             <p class="flex items-center gap-[6px]">
               <img
-                src="@/assets/images/icons/buildings-2-black.svg"
+                src="/src/assets/images/icons/buildings-2-black.svg"
                 class="size-6 flex shrink-0"
                 alt="icon"
               />
@@ -76,7 +80,7 @@
           <div v-if="loadingProducts" class="flex items-center justify-center py-12">
             <div class="flex items-center gap-3">
               <img
-                src="@/assets/images/icons/loading.svg"
+                src="/src/assets/images/icons/loading.svg"
                 class="size-6 animate-spin"
                 alt="loading"
               />
@@ -105,7 +109,7 @@
               </div>
               <div class="flex items-center gap-[6px] w-[187px] shrink-0">
                 <img
-                  src="@/assets/images/icons/box-black.svg"
+                  src="/src/assets/images/icons/box-black.svg"
                   class="size-6 flex shrink-0"
                   alt="icon"
                 />
@@ -142,7 +146,7 @@
             class="flex flex-col flex-1 items-center justify-center rounded-[20px] border-dashed border-2 border-monday-gray gap-6"
           >
             <img
-              src="@/assets/images/icons/document-text-grey.svg"
+              src="/src/assets/images/icons/document-text-grey.svg"
               class="size-[52px]"
               alt="icon"
             />
@@ -154,7 +158,7 @@
         v-else-if="showEmptyState"
         class="flex flex-col flex-1 items-center justify-center rounded-[20px] border-dashed border-2 border-monday-gray gap-6"
       >
-        <img src="@/assets/images/icons/document-text-grey.svg" class="size-[52px]" alt="icon" />
+        <img src="/src/assets/images/icons/document-text-grey.svg" class="size-[52px]" alt="icon" />
         <p class="font-semibold text-monday-gray">
           Oops, it looks like there's no merchant assigned to you yet.
         </p>
@@ -173,7 +177,7 @@
             @click="closeModal"
             class="flex size-14 rounded-full items-center justify-center bg-monday-gray-background"
           >
-            <img src="@/assets/images/icons/close-circle-black.svg" class="size-6" alt="icon" />
+            <img src="/src/assets/images/icons/close-circle-black.svg" class="size-6" alt="icon" />
           </button>
         </div>
         <div class="modal-content flex flex-col rounded-3xl border border-monday-border p-4 gap-5">

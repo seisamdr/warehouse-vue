@@ -4,7 +4,7 @@
       <div
         class="flex flex-col fixed top-0 w-[280px] shrink-0 h-screen pt-[30px] px-4 gap-[30px] overflow-y-auto"
       >
-        <img src="@/assets/images/logos/logo.svg" class="h-8 w-fit" alt="logo" />
+        <img src="/src/assets/images/logos/logo.svg" class="h-8 w-fit" alt="logo" />
         <div class="flex flex-col gap-5 flex-1 min-h-0 overflow-y-auto">
           <nav class="flex flex-col gap-4">
             <p class="font-medium text-monday-gray">Main Menu</p>
@@ -16,12 +16,12 @@
                 >
                   <div class="relative flex size-6 shrink-0">
                     <img
-                      src="@/assets/images/icons/home-black.svg"
+                      src="/src/assets/images/icons/home-black.svg"
                       class="size-6 absolute opacity-100 group-[&.active]:opacity-0 transition-300"
                       alt="icon"
                     />
                     <img
-                      src="@/assets/images/icons/home-blue-fill.svg"
+                      src="/src/assets/images/icons/home-blue-fill.svg"
                       class="size-6 absolute opacity-0 group-[&.active]:opacity-100 transition-300"
                       alt="icon"
                     />
@@ -41,12 +41,12 @@
                 >
                   <div class="relative flex size-6 shrink-0">
                     <img
-                      src="@/assets/images/icons/bag-black.svg"
+                      src="/src/assets/images/icons/bag-black.svg"
                       class="size-6 absolute opacity-100 group-[&.active]:opacity-0 transition-300"
                       alt="icon"
                     />
                     <img
-                      src="@/assets/images/icons/bag-blue-fill.svg"
+                      src="/src/assets/images/icons/bag-blue-fill.svg"
                       class="size-6 absolute opacity-0 group-[&.active]:opacity-100 transition-300"
                       alt="icon"
                     />
@@ -66,12 +66,12 @@
                 >
                   <div class="relative flex size-6 shrink-0">
                     <img
-                      src="@/assets/images/icons/note-2-black.svg"
+                      src="/src/assets/images/icons/note-2-black.svg"
                       class="size-6 absolute opacity-100 group-[&.active]:opacity-0 transition-300"
                       alt="icon"
                     />
                     <img
-                      src="@/assets/images/icons/note-2-blue-fill.svg"
+                      src="/src/assets/images/icons/note-2-blue-fill.svg"
                       class="size-6 absolute opacity-0 group-[&.active]:opacity-100 transition-300"
                       alt="icon"
                     />
@@ -91,12 +91,12 @@
                 >
                   <div class="relative flex size-6 shrink-0">
                     <img
-                      src="@/assets/images/icons/buildings-2-black.svg"
+                      src="/src/assets/images/icons/buildings-2-black.svg"
                       class="size-6 absolute opacity-100 group-[&.active]:opacity-0 transition-300"
                       alt="icon"
                     />
                     <img
-                      src="@/assets/images/icons/buildings-2-blue-fill.svg"
+                      src="/src/assets/images/icons/buildings-2-blue-fill.svg"
                       class="size-6 absolute opacity-0 group-[&.active]:opacity-100 transition-300"
                       alt="icon"
                     />
@@ -116,12 +116,12 @@
                 >
                   <div class="relative flex size-6 shrink-0">
                     <img
-                      src="@/assets/images/icons/shop-black.svg"
+                      src="/src/assets/images/icons/shop-black.svg"
                       class="size-6 absolute opacity-100 group-[&.active]:opacity-0 transition-300"
                       alt="icon"
                     />
                     <img
-                      src="@/assets/images/icons/shop-blue-fill.svg"
+                      src="/src/assets/images/icons/shop-blue-fill.svg"
                       class="size-6 absolute opacity-0 group-[&.active]:opacity-100 transition-300"
                       alt="icon"
                     />
@@ -146,12 +146,12 @@
                 >
                   <div class="relative flex size-6 shrink-0">
                     <img
-                      src="@/assets/images/icons/stickynote-black.svg"
+                      src="/src/assets/images/icons/stickynote-black.svg"
                       class="size-6 absolute opacity-100 group-[&.active]:opacity-0 transition-300"
                       alt="icon"
                     />
                     <img
-                      src="@/assets/images/icons/stickynote-blue-fill.svg"
+                      src="/src/assets/images/icons/stickynote-blue-fill.svg"
                       class="size-6 absolute opacity-0 group-[&.active]:opacity-100 transition-300"
                       alt="icon"
                     />
@@ -174,7 +174,7 @@
                 >
                   <div class="relative flex size-6 shrink-0">
                     <img
-                      src="@/assets/images/icons/user-square-black.svg"
+                      src="/src/assets/images/icons/user-square-black.svg"
                       :class="['size-6 absolute transition-300']"
                       alt="icon"
                     />
@@ -200,7 +200,7 @@
                 <div v-show="userMenuExpanded" class="flex">
                   <div class="flex w-[56px] shrink-0 justify-end items-start">
                     <img
-                      src="@/assets/images/icons/accordion-branch.svg"
+                      src="/src/assets/images/icons/accordion-branch.svg"
                       class="w-[28px]"
                       alt="icon"
                     />
@@ -216,7 +216,7 @@
                       >
                         <div class="relative flex size-6 shrink-0">
                           <img
-                            src="@/assets/images/icons/profile-2user-black.svg"
+                            src="/src/assets/images/icons/profile-2user-black.svg"
                             :class="[
                               'size-6 absolute transition-300',
                               $route.path === '/users' ? 'opacity-0' : 'opacity-100',
@@ -224,7 +224,7 @@
                             alt="icon"
                           />
                           <img
-                            src="@/assets/images/icons/profile-2user-blue-fill.svg"
+                            src="/src/assets/images/icons/profile-2user-blue-fill.svg"
                             :class="[
                               'size-6 absolute transition-300',
                               $route.path === '/users' ? 'opacity-100' : 'opacity-0',
@@ -258,7 +258,7 @@
                       >
                         <div class="relative flex size-6 shrink-0">
                           <img
-                            src="@/assets/images/icons/profile-tick-black.svg"
+                            src="/src/assets/images/icons/profile-tick-black.svg"
                             :class="[
                               'size-6 absolute transition-300',
                               $route.path === '/user-roles' ? 'opacity-0' : 'opacity-100',
@@ -266,7 +266,7 @@
                             alt="icon"
                           />
                           <img
-                            src="@/assets/images/icons/profile-tick-blue.svg"
+                            src="/src/assets/images/icons/profile-tick-blue.svg"
                             :class="[
                               'size-6 absolute transition-300',
                               $route.path === '/user-roles' ? 'opacity-100' : 'opacity-0',
@@ -300,12 +300,12 @@
                 >
                   <div class="relative flex size-6 shrink-0">
                     <img
-                      src="@/assets/images/icons/setting-black.svg"
+                      src="/src/assets/images/icons/setting-black.svg"
                       class="size-6 absolute opacity-100 group-[&.active]:opacity-0 transition-300"
                       alt="icon"
                     />
                     <img
-                      src="@/assets/images/icons/setting-black.svg"
+                      src="/src/assets/images/icons/setting-black.svg"
                       class="size-6 absolute opacity-0 group-[&.active]:opacity-100 transition-300"
                       alt="icon"
                     />
@@ -334,7 +334,7 @@
               class="flex items-center gap-[6px] text-monday-gray font-semibold"
             >
               <img
-                src="@/assets/images/icons/arrow-left-grey.svg"
+                src="/src/assets/images/icons/arrow-left-grey.svg"
                 class="size-4 flex shrink-0"
                 alt="icon"
               />
@@ -347,7 +347,7 @@
                 class="flex size-14 rounded-full bg-monday-gray-background items-center justify-center overflow-hidden"
               >
                 <img
-                  src="@/assets//images/icons/search-normal-black.svg"
+                  src="/src/assets//images/icons/search-normal-black.svg"
                   class="size-6"
                   alt="icon"
                 />
@@ -358,7 +358,7 @@
                 class="flex size-14 rounded-full bg-monday-gray-background items-center justify-center overflow-hidden"
               >
                 <img
-                  src="@/assets//images/icons/notification-black.svg"
+                  src="/src/assets//images/icons/notification-black.svg"
                   class="size-6"
                   alt="icon"
                 />
@@ -368,7 +368,11 @@
               <div
                 class="flex size-14 rounded-full bg-monday-lime-green items-center justify-center overflow-hidden"
               >
-                <img src="@/assets//images/icons/crown-black-fill.svg" class="size-6" alt="icon" />
+                <img
+                  src="/src/assets//images/icons/crown-black-fill.svg"
+                  class="size-6"
+                  alt="icon"
+                />
               </div>
               <p
                 class="absolute transform -translate-x-1/2 left-1/2 -bottom-2 rounded-[20px] py-1 px-2 bg-monday-black text-white w-fit font-extrabold text-[8px]"
@@ -385,7 +389,7 @@
               class="flex size-full items-center justify-center bg-monday-gray-background"
             >
               <img
-                src="@/assets/images/icons/loading.svg"
+                src="/src/assets/images/icons/loading.svg"
                 class="size-6 animate-spin"
                 alt="loading"
               />
@@ -405,7 +409,7 @@
             <template v-else>
               <p class="font-semibold">{{ currentUser?.name || 'User' }}</p>
               <p class="flex items-center gap-1 font-medium text-monday-gray">
-                <img src="@/assets/images/icons/user-grey.svg" class="size-4" alt="icon" />
+                <img src="/src/assets/images/icons/user-grey.svg" class="size-4" alt="icon" />
                 {{ currentUser?.roles || 'User' }}
               </p>
             </template>
@@ -417,7 +421,7 @@
             type="button"
           >
             <img
-              src="@/assets/images/icons/logout.svg"
+              src="/src/assets/images/icons/logout.svg"
               class="flex size-6 shrink-0 pointer-events-none"
               alt="icon"
             />
@@ -432,7 +436,7 @@
     <div class="relative bg-white rounded-3xl p-6 w-96 max-w-[90vw]">
       <div class="flex items-center gap-4 mb-6">
         <div class="flex size-12 rounded-full bg-red-100 items-center justify-center">
-          <img src="@/assets/images/icons/logout.svg" class="size-6" alt="logout" />
+          <img src="/src/assets/images/icons/logout.svg" class="size-6" alt="logout" />
         </div>
         <div>
           <h3 class="font-bold text-xl">Konfirmasi Logout</h3>

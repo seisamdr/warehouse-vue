@@ -8,7 +8,7 @@
       <div id="Steps" class="relative flex w-full h-[127px] rounded-3xl p-[18px] bg-white">
         <div class="relative flex flex-col w-full gap-3 items-center text-center">
           <img
-            src="@/assets/images/icons/tick-square-checked-blue.svg"
+            src="/src/assets/images/icons/tick-square-checked-blue.svg"
             class="size-8 flex shrink-0"
             alt="icon"
           />
@@ -21,14 +21,14 @@
           class="absolute transform -translate-y-1/2 top-[34px] left-[21.6%] h-[3px] overflow-hidden w-1/4"
         >
           <img
-            src="@/assets/images/icons/Line-blue.svg"
+            src="/src/assets/images/icons/Line-blue.svg"
             class="size-full object-cover object-center"
             alt="icon"
           />
         </div>
         <div class="relative flex flex-col w-full gap-3 items-center text-center">
           <img
-            src="@/assets/images/icons/tick-square-checked-blue.svg"
+            src="/src/assets/images/icons/tick-square-checked-blue.svg"
             class="size-8 flex shrink-0"
             alt="icon"
           />
@@ -41,14 +41,14 @@
           class="absolute transform -translate-y-1/2 top-[34px] right-[21.6%] h-[3px] overflow-hidden w-1/4"
         >
           <img
-            src="@/assets/images/icons/Line-blue.svg"
+            src="/src/assets/images/icons/Line-blue.svg"
             class="size-full object-cover object-center"
             alt="icon"
           />
         </div>
         <div class="relative flex flex-col w-full gap-3 items-center text-center">
           <img
-            src="@/assets/images/icons/tick-square-blue.svg"
+            src="/src/assets/images/icons/tick-square-blue.svg"
             class="size-8 flex shrink-0"
             alt="icon"
           />
@@ -91,7 +91,7 @@
               <div class="flex w-full items-center justify-between">
                 <p class="flex items-center gap-1 font-medium text-monday-gray">
                   <img
-                    src="@/assets/images/icons/money-grey.svg"
+                    src="/src/assets/images/icons/money-grey.svg"
                     class="size-6 flex shrink-0"
                     alt="icon"
                   />
@@ -118,7 +118,7 @@
                 <p class="font-semibold text-xl">{{ customerInfo.merchant?.name }}</p>
                 <p class="flex items-center gap-1 font-medium text-lg text-monday-gray">
                   <img
-                    src="@/assets/images/icons/call-grey.svg"
+                    src="/src/assets/images/icons/call-grey.svg"
                     class="size-6 flex shrink-0"
                     alt="icon"
                   />
@@ -136,7 +136,7 @@
                     <p class="font-semibold text-lg">{{ customerInfo.customerName }}</p>
                     <p class="flex items-center gap-1 font-medium text-lg text-monday-gray">
                       <img
-                        src="@/assets/images/icons/call-grey.svg"
+                        src="/src/assets/images/icons/call-grey.svg"
                         class="size-6 flex shrink-0"
                         alt="icon"
                       />
@@ -147,7 +147,7 @@
                     class="flex size-[56px] rounded-2xl bg-monday-background items-center justify-center overflow-hidden"
                   >
                     <img
-                      src="@/assets/images/icons/user-thin-grey.svg"
+                      src="/src/assets/images/icons/user-thin-grey.svg"
                       class="flex size-6 shrink-0"
                       alt="icon"
                     />
@@ -162,7 +162,7 @@
                   <div class="flex w-full items-center justify-between">
                     <p class="flex items-center gap-1 font-medium text-monday-gray">
                       <img
-                        src="@/assets/images/icons/shopping-cart-grey.svg"
+                        src="/src/assets/images/icons/shopping-cart-grey.svg"
                         class="size-6 flex shrink-0"
                         alt="icon"
                       />
@@ -173,7 +173,7 @@
                   <div class="flex w-full items-center justify-between">
                     <p class="flex items-center gap-1 font-medium text-monday-gray">
                       <img
-                        src="@/assets/images/icons/box-grey.svg"
+                        src="/src/assets/images/icons/box-grey.svg"
                         class="size-6 flex shrink-0"
                         alt="icon"
                       />
@@ -184,7 +184,7 @@
                   <div class="flex w-full items-center justify-between">
                     <p class="flex items-center gap-1 font-medium text-monday-gray">
                       <img
-                        src="@/assets/images/icons/receipt-2-grey.svg"
+                        src="/src/assets/images/icons/receipt-2-grey.svg"
                         class="size-6 flex shrink-0"
                         alt="icon"
                       />
@@ -195,7 +195,7 @@
                   <div class="flex w-full items-center justify-between">
                     <p class="flex items-center gap-1 font-medium text-monday-gray">
                       <img
-                        src="@/assets/images/icons/note-text-grey.svg"
+                        src="/src/assets/images/icons/note-text-grey.svg"
                         class="size-6 flex shrink-0"
                         alt="icon"
                       />
@@ -207,7 +207,7 @@
                   <div class="flex w-full items-center justify-between">
                     <p class="flex items-center gap-1 font-medium text-monday-gray">
                       <img
-                        src="@/assets/images/icons/moneys-grey.svg"
+                        src="/src/assets/images/icons/moneys-grey.svg"
                         class="size-6 flex shrink-0"
                         alt="icon"
                       />

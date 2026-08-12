@@ -8,7 +8,7 @@
           :disabled="dashboardLoading"
         >
           <img
-            src="@/assets/images/icons/loading.svg"
+            src="/src/assets/images/icons/loading.svg"
             class="size-6 shrink-0"
             :class="{ 'animate-spin': dashboardLoading }"
             alt="refresh"
@@ -21,7 +21,7 @@
         <div v-if="dashboardLoading" class="col-span-3 flex items-center justify-center py-12">
           <div class="text-center">
             <img
-              src="@/assets/images/icons/loading.svg"
+              src="/src/assets/images/icons/loading.svg"
               class="size-12 animate-spin mx-auto mb-4"
               alt="loading"
             />
@@ -32,7 +32,7 @@
         <div v-else-if="!currentMerchant" class="col-span-3 flex items-center justify-center py-12">
           <div class="text-center">
             <img
-              src="@/assets/images/icons/shop-grey.svg"
+              src="/src/assets/images/icons/shop-grey.svg"
               class="size-12 mx-auto mb-4"
               alt="no merchant"
             />
@@ -43,7 +43,7 @@
         <template v-else>
           <div id="Total-Revenue" class="flex flex-col rounded-3xl p-[18px] gap-5 bg-white">
             <div class="flex size-14 rounded-full bg-monday-blue/10 items-center justify-center">
-              <img src="@/assets/images/icons/wallet-blue-fill.svg" class="size-6" alt="icon" />
+              <img src="/src/assets/images/icons/wallet-blue-fill.svg" class="size-6" alt="icon" />
             </div>
             <div class="flex flex-col gap-[6px]">
               <p class="font-semibold text-[32px]">
@@ -55,7 +55,7 @@
           <div id="Total-Transactions" class="flex flex-col rounded-3xl p-[18px] gap-5 bg-white">
             <div class="flex size-14 rounded-full bg-monday-blue/10 items-center justify-center">
               <img
-                src="@/assets/images/icons/document-text-blue-fill.svg"
+                src="/src/assets/images/icons/document-text-blue-fill.svg"
                 class="size-6"
                 alt="icon"
               />
@@ -69,7 +69,7 @@
           </div>
           <div id="Products-Sold" class="flex flex-col rounded-3xl p-[18px] gap-5 bg-white">
             <div class="flex size-14 rounded-full bg-monday-blue/10 items-center justify-center">
-              <img src="@/assets/images/icons/bag-blue-fill.svg" class="size-6" alt="icon" />
+              <img src="/src/assets/images/icons/bag-blue-fill.svg" class="size-6" alt="icon" />
             </div>
             <div class="flex flex-col gap-[6px]">
               <p class="font-semibold text-[32px]">
@@ -88,7 +88,7 @@
           <h2 class="font-bold text-xl">Lastest Transaction</h2>
           <div v-if="loading" class="flex items-center gap-2">
             <img
-              src="@/assets/images/icons/loading.svg"
+              src="/src/assets/images/icons/loading.svg"
               class="size-5 animate-spin"
               alt="loading"
             />
@@ -101,7 +101,7 @@
           class="flex flex-col items-center justify-center py-12"
         >
           <img
-            src="@/assets/images/icons/loading.svg"
+            src="/src/assets/images/icons/loading.svg"
             class="size-12 animate-spin mb-4"
             alt="loading"
           />
@@ -119,7 +119,7 @@
                 class="flex size-[86px] rounded-2xl bg-monday-background items-center justify-center overflow-hidden"
               >
                 <img
-                  src="@/assets/images/icons/user-thin-grey.svg"
+                  src="/src/assets/images/icons/user-thin-grey.svg"
                   class="flex size-[42px] shrink-0"
                   alt="icon"
                 />
@@ -128,7 +128,7 @@
                 <p class="font-semibold text-xl">{{ transaction.name }}</p>
                 <p class="flex items-center gap-1 font-medium text-lg text-monday-gray">
                   <img
-                    src="@/assets/images/icons/call-grey.svg"
+                    src="/src/assets/images/icons/call-grey.svg"
                     class="size-6 flex shrink-0"
                     alt="icon"
                   />
@@ -137,7 +137,7 @@
               </div>
               <div class="flex items-center gap-[6px]">
                 <img
-                  src="@/assets/images/icons/shop-black.svg"
+                  src="/src/assets/images/icons/shop-black.svg"
                   class="size-6 flex shrink-0"
                   alt="icon"
                 />
@@ -215,7 +215,7 @@
             <div class="flex items-center justify-between px-4 py-5">
               <p class="flex items-center gap-1 font-semibold text-lg text-monday-gray">
                 <img
-                  src="@/assets/images/icons/money-grey.svg"
+                  src="/src/assets/images/icons/money-grey.svg"
                   class="size-6 flex shrink-0"
                   alt="icon"
                 />
@@ -232,7 +232,11 @@
           v-else-if="!loading"
           class="flex flex-col flex-1 items-center justify-center rounded-[20px] border-dashed border-2 border-monday-gray gap-6 py-12"
         >
-          <img src="@/assets/images/icons/document-text-grey.svg" class="size-[52px]" alt="icon" />
+          <img
+            src="/src/assets/images/icons/document-text-grey.svg"
+            class="size-[52px]"
+            alt="icon"
+          />
           <p class="font-semibold text-monday-gray">
             Oops, it looks like there's no transaction data yet.
           </p>
@@ -253,7 +257,7 @@
           @click="closeModal"
           class="flex size-14 rounded-full items-center justify-center bg-monday-gray-background"
         >
-          <img src="@/assets/images/icons/close-circle-black.svg" class="size-6" alt="icon" />
+          <img src="/src/assets/images/icons/close-circle-black.svg" class="size-6" alt="icon" />
         </button>
       </div>
       <div

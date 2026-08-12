@@ -6,7 +6,7 @@
           <div class="flex flex-col gap-[6px]">
             <p class="flex items-center gap-[6px]">
               <img
-                src="@/assets/images/icons/profile-2user-black.svg"
+                src="/src/assets/images/icons/profile-2user-black.svg"
                 class="size-6 flex shrink-0"
                 alt="icon"
               />
@@ -19,7 +19,7 @@
           <router-link to="/add-users" class="btn btn-primary font-semibold">
             Add New
             <img
-              src="@/assets/images/icons/add-square-white.svg"
+              src="/src/assets/images/icons/add-square-white.svg"
               class="flex sixe-6 shrink-0"
               alt="icon"
             />
@@ -33,7 +33,7 @@
           <!-- Loading State -->
           <div v-if="loading" class="flex flex-col items-center justify-center py-12">
             <img
-              src="@/assets/images/icons/loading.svg"
+              src="/src/assets/images/icons/loading.svg"
               class="size-12 animate-spin"
               alt="loading"
             />
@@ -43,7 +43,7 @@
           <!-- Error State -->
           <div v-else-if="error" class="flex flex-col items-center justify-center py-12">
             <img
-              src="@/assets/images/icons/document-text-grey.svg"
+              src="/src/assets/images/icons/document-text-grey.svg"
               class="size-[52px]"
               alt="error"
             />
@@ -58,13 +58,17 @@
                   <div
                     class="flex size-[76px] rounded-full bg-monday-background items-center justify-center overflow-hidden"
                   >
-                    <img :src="user.photo" class="size-full object-cover" alt="icon" />
+                    <img
+                      :src="user.photo || '/src/assets/images/photos/photos-2.png'"
+                      class="size-full object-cover"
+                      alt="icon"
+                    />
                   </div>
                   <div class="flex flex-col gap-2 flex-1">
                     <p class="font-semibold text-xl">{{ user.name }}</p>
                     <p class="flex items-center gap-1 font-medium text-lg text-monday-gray">
                       <img
-                        src="@/assets/images/icons/call-grey.svg"
+                        src="/src/assets/images/icons/call-grey.svg"
                         class="size-6 flex shrink-0"
                         alt="icon"
                       />
@@ -77,7 +81,7 @@
                     class="flex size-[54px] rounded-2xl bg-monday-gray-background items-center justify-center"
                   >
                     <img
-                      src="@/assets/images/icons/user-octagon-grey.svg"
+                      src="/src/assets/images/icons/user-octagon-grey.svg"
                       class="flex size-6 shrink-0"
                       alt="icon"
                     />
@@ -92,7 +96,7 @@
                   class="btn btn-black min-w-[130px] font-semibold"
                 >
                   <img
-                    src="@/assets/images/icons/edit-white.svg"
+                    src="/src/assets/images/icons/edit-white.svg"
                     class="flex size-6 shrink-0"
                     alt="icon"
                   />

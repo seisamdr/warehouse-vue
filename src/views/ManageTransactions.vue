@@ -9,7 +9,7 @@
           class="flex size-16 rounded-2xl bg-monday-background items-center justify-center overflow-hidden"
         >
           <img
-            :src="merchantInfo?.photo || '@/assets/images/thumbnails/merchant-1.png'"
+            :src="merchantInfo?.photo || '/src/assets/images/thumbnails/merchant-1.png'"
             class="size-full object-contain"
             alt="icon"
           />
@@ -18,7 +18,7 @@
           <p class="font-semibold text-xl">{{ merchantInfo?.name }}</p>
           <p class="flex items-center gap-1 font-medium text-lg text-monday-gray">
             <img
-              src="@/assets/images/icons/call-grey.svg"
+              src="/src/assets/images/icons/call-grey.svg"
               class="size-6 flex shrink-0"
               alt="icon"
             />
@@ -28,7 +28,7 @@
         <div class="flex flex-col gap-2 flex-1">
           <p class="flex items-center gap-1 font-medium text-monday-gray">
             <img
-              src="@/assets/images/icons/user-grey.svg"
+              src="/src/assets/images/icons/user-grey.svg"
               class="size-4 flex shrink-0"
               alt="icon"
             />
@@ -42,7 +42,7 @@
           <div class="flex flex-col gap-[6px]">
             <p class="flex items-center gap-[6px]">
               <img
-                src="@/assets/images/icons/receipt-text-black.svg"
+                src="/src/assets/images/icons/receipt-text-black.svg"
                 class="size-6 flex shrink-0"
                 alt="icon"
               />
@@ -57,7 +57,7 @@
           <router-link to="/transaction/add-1" class="btn btn-primary font-semibold">
             Add New
             <img
-              src="@/assets/images/icons/add-square-white.svg"
+              src="/src/assets/images/icons/add-square-white.svg"
               class="flex sixe-6 shrink-0"
               alt="icon"
             />
@@ -86,7 +86,7 @@
                   class="flex size-[86px] rounded-2xl bg-monday-background items-center justify-center overflow-hidden"
                 >
                   <img
-                    src="@/assets/images/icons/user-thin-grey.svg"
+                    src="/src/assets/images/icons/user-thin-grey.svg"
                     class="flex size-[42px] shrink-0"
                     alt="icon"
                   />
@@ -95,7 +95,7 @@
                   <p class="font-semibold text-xl">{{ transaction.name }}</p>
                   <p class="flex items-center gap-1 font-medium text-lg text-monday-gray">
                     <img
-                      src="@/assets/images/icons/call-grey.svg"
+                      src="/src/assets/images/icons/call-grey.svg"
                       class="size-6 flex shrink-0"
                       alt="icon"
                     />
@@ -168,7 +168,7 @@
             <div class="flex items-center justify-between px-4 py-5">
               <p class="flex items-center gap-1 font-semibold text-lg text-monday-gray">
                 <img
-                  src="@/assets/images/icons/money-grey.svg"
+                  src="/src/assets/images/icons/money-grey.svg"
                   class="size-6 flex shrink-0"
                   alt="icon"
                 />
@@ -184,7 +184,7 @@
             class="hidden flex flex-col flex-1 items-center justify-center rounded-[20px] border-dashed border-2 border-monday-gray gap-6"
           >
             <img
-              src="@/assets/images/icons/document-text-grey.svg"
+              src="/src/assets/images/icons/document-text-grey.svg"
               class="size-[52px]"
               alt="icon"
             />
@@ -205,7 +205,7 @@
             @click="closeModal"
             class="flex size-14 rounded-full items-center justify-center bg-monday-gray-background"
           >
-            <img src="@/assets/images/icons/close-circle-black.svg" class="size-6" alt="icon" />
+            <img src="/src/assets/images/icons/close-circle-black.svg" class="size-6" alt="icon" />
           </button>
         </div>
         <div class="modal-content flex flex-col rounded-3xl border border-monday-border p-4 gap-5">

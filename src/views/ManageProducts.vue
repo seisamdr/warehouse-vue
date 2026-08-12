@@ -6,7 +6,7 @@
           <div class="flex flex-col gap-[6px]">
             <p class="flex items-center gap-[6px]">
               <img
-                src="@/assets/images/icons/bag-black.svg"
+                src="/src/assets/images/icons/bag-black.svg"
                 class="size-6 flex shrink-0"
                 alt="icon"
               />
@@ -21,7 +21,7 @@
           <a href="/add-products" class="btn btn-primary font-semibold">
             Add New
             <img
-              src="@/assets/images/icons/add-square-white.svg"
+              src="/src/assets/images/icons/add-square-white.svg"
               class="flex sixe-6 shrink-0"
               alt="icon"
             />
@@ -65,7 +65,7 @@
                     class="btn btn-black min-w-[130px] font-semibold"
                   >
                     <img
-                      src="@/assets/images/icons/edit-white.svg"
+                      src="/src/assets/images/icons/edit-white.svg"
                       class="flex size-6 shrink-0"
                       alt="icon"
                     />
@@ -82,10 +82,10 @@
           <div
             v-else
             id="Empty-State"
-            class="hidden flex flex-col flex-1 items-center justify-center rounded-[20px] border-dashed border-2 border-monday-gray gap-6"
+            class="hidden flex-col flex-1 items-center justify-center rounded-[20px] border-dashed border-2 border-monday-gray gap-6"
           >
             <img
-              src="@/assets/images/icons/document-text-grey.svg"
+              src="/src/assets/images/icons/document-text-grey.svg"
               class="size-[52px]"
               alt="icon"
             />
@@ -146,7 +146,7 @@
           @click="closeModal"
           class="flex size-14 rounded-full items-center justify-center bg-monday-gray-background"
         >
-          <img src="@/assets/images/icons/close-circle-black.svg" class="size-6" alt="icon" />
+          <img src="/src/assets/images/icons/close-circle-black.svg" class="size-6" alt="icon" />
         </button>
       </div>
       <div

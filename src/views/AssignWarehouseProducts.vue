@@ -19,7 +19,7 @@
                 <p class="font-semibold text-lg">{{ warehouse.name }}</p>
                 <p class="flex items-center gap-1 font-medium text-lg text-monday-gray">
                   <img
-                    src="@/assets/images/icons/call-grey.svg"
+                    src="/src/assets/images/icons/call-grey.svg"
                     class="size-6 flex shrink-0"
                     alt="icon"
                   />
@@ -36,7 +36,7 @@
             <FormSelect
               v-model="formData.productId"
               label="Product ID"
-              icon="@/assets/images/icons/barcode-black.svg"
+              icon="/src/assets/images/icons/barcode-black.svg"
               required
             >
               <option v-for="product in availableProducts" :key="product.id" :value="product.id">
@@ -46,7 +46,7 @@
             <FormInput
               v-model="formData.stock"
               label="Stock"
-              icon="@/assets/images/icons/box-grey.svg"
+              icon="/src/assets/images/icons/box-grey.svg"
               type="number"
               min="0"
               step="1"
@@ -70,7 +70,7 @@
           <ul class="flex flex-col gap-4">
             <li class="flex gap-[6px]">
               <img
-                src="@/assets/images/icons/Checklist-green-circle.svg"
+                src="/src/assets/images/icons/Checklist-green-circle.svg"
                 class="flex size-6 shrink-0"
                 alt="icon"
               />
@@ -80,7 +80,7 @@
             </li>
             <li class="flex gap-[6px]">
               <img
-                src="@/assets/images/icons/Checklist-green-circle.svg"
+                src="/src/assets/images/icons/Checklist-green-circle.svg"
                 class="flex size-6 shrink-0"
                 alt="icon"
               />
@@ -90,7 +90,7 @@
             </li>
             <li class="flex gap-[6px]">
               <img
-                src="@/assets/images/icons/Checklist-green-circle.svg"
+                src="/src/assets/images/icons/Checklist-green-circle.svg"
                 class="flex size-6 shrink-0"
                 alt="icon"
               />
@@ -100,7 +100,7 @@
             </li>
             <li class="flex gap-[6px]">
               <img
-                src="@/assets/images/icons/Checklist-green-circle.svg"
+                src="/src/assets/images/icons/Checklist-green-circle.svg"
                 class="flex size-6 shrink-0"
                 alt="icon"
               />
@@ -110,7 +110,7 @@
             </li>
             <li class="flex gap-[6px]">
               <img
-                src="@/assets/images/icons/Checklist-green-circle.svg"
+                src="/src/assets/images/icons/Checklist-green-circle.svg"
                 class="flex size-6 shrink-0"
                 alt="icon"
               />

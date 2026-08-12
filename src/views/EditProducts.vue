@@ -10,7 +10,7 @@
           <div v-if="isLoadingProduct" class="flex items-center justify-center py-8">
             <div class="text-center">
               <img
-                src="@/assets/images/icons/loading.svg"
+                src="/src/assets/images/icons/loading.svg"
                 class="h-8 w-8 mx-auto mb-4 text-blue-600"
                 alt="loading"
               />
@@ -114,7 +114,7 @@
           <FormSelect
             v-model="form.popularity"
             label="Popularity"
-            icon="@/assets/images/icons/strongbox-grey.svg"
+            icon="/src/assets/images/icons/strongbox-grey.svg"
             required
           >
             <option :value="true">Popular</option>
@@ -123,28 +123,28 @@
           <FormInput
             v-model="form.name"
             label="Product Name"
-            icon="@/assets/images/icons/bag-grey.svg"
+            icon="/src/assets/images/icons/bag-grey.svg"
             required="true"
           />
 
           <FormInput
             v-model="form.barcode"
             label="Product Barcode"
-            icon="@/assets/images/icons/barcode-black.svg"
+            icon="/src/assets/images/icons/barcode-black.svg"
             required="true"
           />
 
           <FormInput
             v-model="form.price"
             label="Product Price"
-            icon="@/assets/images/icons/moneys-grey.svg"
+            icon="/src/assets/images/icons/moneys-grey.svg"
             required="true"
             type="number"
           />
           <FormSelect
             v-model="form.category"
             label="Product Category"
-            icon="@/assets/images/icons/note-2-grey.svg"
+            icon="/src/assets/images/icons/note-2-grey.svg"
             required
           >
             <option value="" disabled>Select Category</option>
@@ -155,7 +155,7 @@
           <FormTextarea
             v-model="form.description"
             label="Product About"
-            icon="@/assets/images/icons/note-2-grey.svg"
+            icon="/src/assets/images/icons/note-2-grey.svg"
             required
             maxlength="1000"
             :show-counter="true"
@@ -170,7 +170,7 @@
           <ul class="flex flex-col gap-4">
             <li class="flex gap-[6px]">
               <img
-                src="@/assets/images/icons/Checklist-green-circle.svg"
+                src="/src/assets/images/icons/Checklist-green-circle.svg"
                 class="flex size-6 shrink-0"
                 alt="icon"
               />
@@ -178,7 +178,7 @@
             </li>
             <li class="flex gap-[6px]">
               <img
-                src="@/assets/images/icons/Checklist-green-circle.svg"
+                src="/src/assets/images/icons/Checklist-green-circle.svg"
                 class="flex size-6 shrink-0"
                 alt="icon"
               />
@@ -188,7 +188,7 @@
             </li>
             <li class="flex gap-[6px]">
               <img
-                src="@/assets/images/icons/Checklist-green-circle.svg"
+                src="/src/assets/images/icons/Checklist-green-circle.svg"
                 class="flex size-6 shrink-0"
                 alt="icon"
               />
@@ -198,7 +198,7 @@
             </li>
             <li class="flex gap-[6px]">
               <img
-                src="@/assets/images/icons/Checklist-green-circle.svg"
+                src="/src/assets/images/icons/Checklist-green-circle.svg"
                 class="flex size-6 shrink-0"
                 alt="icon"
               />
@@ -208,7 +208,7 @@
             </li>
             <li class="flex gap-[6px]">
               <img
-                src="@/assets/images/icons/Checklist-green-circle.svg"
+                src="/src/assets/images/icons/Checklist-green-circle.svg"
                 class="flex size-6 shrink-0"
                 alt="icon"
               />

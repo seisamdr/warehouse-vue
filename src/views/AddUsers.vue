@@ -14,7 +14,7 @@
               <img
                 id="Thumbnail"
                 :src="photoPreview || '/src/assets/images/icons/gallery-default.svg'"
-                data-default="@/assets/images/icons/gallery-default.svg"
+                data-default="/src/assets/images/icons/gallery-default.svg"
                 class="size-full object-contain"
                 alt="icon"
               />
@@ -36,34 +36,34 @@
           <FormInput
             v-model="formData.fullName"
             label="Full Name"
-            icon="@/assets/images/icons/profile-grey.svg"
+            icon="/src/assets/images/icons/profile-grey.svg"
             required="true"
           />
           <FormInput
             v-model="formData.phoneNumber"
             label="Phone Number"
-            icon="@/assets/images/icons/call-grey.svg"
+            icon="/src/assets/images/icons/call-grey.svg"
             required="true"
             type="tel"
           />
           <FormInput
             v-model="formData.email"
             label="Email Address"
-            icon="@/assets/images/icons/sms-grey.svg"
+            icon="/src/assets/images/icons/sms-grey.svg"
             required="true"
             type="email"
           />
           <FormInput
             v-model="formData.password"
             label="Password"
-            icon="@/assets/images/icons/key-grey.svg"
+            icon="/src/assets/images/icons/key-grey.svg"
             required="true"
             type="password"
           />
           <FormInput
             v-model="formData.passwordConfirmation"
             label="Password Confirmation"
-            icon="@/assets/images/icons/key-grey.svg"
+            icon="/src/assets/images/icons/key-grey.svg"
             required="true"
             type="password"
           />
@@ -79,7 +79,7 @@
           <ul class="flex flex-col gap-4">
             <li class="flex gap-[6px]">
               <img
-                src="@/assets/images/icons/Checklist-green-circle.svg"
+                src="/src/assets/images/icons/Checklist-green-circle.svg"
                 class="flex size-6 shrink-0"
                 alt="icon"
               />
@@ -89,7 +89,7 @@
             </li>
             <li class="flex gap-[6px]">
               <img
-                src="@/assets/images/icons/Checklist-green-circle.svg"
+                src="/src/assets/images/icons/Checklist-green-circle.svg"
                 class="flex size-6 shrink-0"
                 alt="icon"
               />
@@ -99,7 +99,7 @@
             </li>
             <li class="flex gap-[6px]">
               <img
-                src="@/assets/images/icons/Checklist-green-circle.svg"
+                src="/src/assets/images/icons/Checklist-green-circle.svg"
                 class="flex size-6 shrink-0"
                 alt="icon"
               />
@@ -110,7 +110,7 @@
             </li>
             <li class="flex gap-[6px]">
               <img
-                src="@/assets/images/icons/Checklist-green-circle.svg"
+                src="/src/assets/images/icons/Checklist-green-circle.svg"
                 class="flex size-6 shrink-0"
                 alt="icon"
               />
@@ -120,7 +120,7 @@
             </li>
             <li class="flex gap-[6px]">
               <img
-                src="@/assets/images/icons/Checklist-green-circle.svg"
+                src="/src/assets/images/icons/Checklist-green-circle.svg"
                 class="flex size-6 shrink-0"
                 alt="icon"
               />

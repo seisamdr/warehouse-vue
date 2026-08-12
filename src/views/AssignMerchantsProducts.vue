@@ -13,7 +13,7 @@
             class="flex flex-col items-center justify-center rounded-3xl p-[18px] gap-6 bg-white"
           >
             <img
-              src="@/assets/images/icons/loading.svg"
+              src="/src/assets/images/icons/loading.svg"
               class="size-[52px] animate-spin"
               alt="loading"
             />
@@ -27,7 +27,7 @@
                 class="flex size-16 rounded-2xl bg-monday-background items-center justify-center overflow-hidden"
               >
                 <img
-                  src="@/assets/images/thumbnails/merchant-1.png"
+                  src="/src/assets/images/thumbnails/merchant-1.png"
                   class="size-full object-cover"
                   alt="icon"
                 />
@@ -36,7 +36,7 @@
                 <p class="font-semibold text-lg">{{ merchantDetails.name }}</p>
                 <p class="flex items-center gap-1 font-medium text-lg text-monday-gray">
                   <img
-                    src="@/assets/images/icons/user-thin-grey.svg"
+                    src="/src/assets/images/icons/user-thin-grey.svg"
                     class="size-6 flex shrink-0"
                     alt="icon"
                   />
@@ -58,7 +58,7 @@
                 class="flex items-center pr-4 absolute transform -translate-y-1/2 top-1/2 left-6 border-r-[1.5px] border-monday-border"
               >
                 <img
-                  src="@/assets/images/icons/bag-grey.svg"
+                  src="/src/assets/images/icons/bag-grey.svg"
                   class="flex size-6 shrink-0"
                   alt="icon"
                 />
@@ -82,7 +82,7 @@
                 </option>
               </select>
               <img
-                src="@/assets/images/icons/arrow-down-grey.svg"
+                src="/src/assets/images/icons/arrow-down-grey.svg"
                 class="absolute transform -translate-y-1/2 top-1/2 right-6 size-6"
                 alt="icon"
               />
@@ -94,7 +94,7 @@
                 class="flex items-center pr-4 absolute transform -translate-y-1/2 top-1/2 left-6 border-r-[1.5px] border-monday-border"
               >
                 <img
-                  src="@/assets/images/icons/buildings-2-grey.svg"
+                  src="/src/assets/images/icons/buildings-2-grey.svg"
                   class="flex size-6 shrink-0"
                   alt="icon"
                 />
@@ -124,7 +124,7 @@
                 </option>
               </select>
               <img
-                src="@/assets/images/icons/arrow-down-grey.svg"
+                src="/src/assets/images/icons/arrow-down-grey.svg"
                 class="absolute transform -translate-y-1/2 top-1/2 right-6 size-6"
                 alt="icon"
               />
@@ -132,7 +132,7 @@
             <FormInput
               v-model="formData.stock"
               label="Stock"
-              icon="@/assets/images/icons/box-grey.svg"
+              icon="/src/assets/images/icons/box-grey.svg"
               type="number"
               min="0"
               step="1"
@@ -156,7 +156,7 @@
           <ul class="flex flex-col gap-4">
             <li class="flex gap-[6px]">
               <img
-                src="@/assets/images/icons/Checklist-green-circle.svg"
+                src="/src/assets/images/icons/Checklist-green-circle.svg"
                 class="flex size-6 shrink-0"
                 alt="icon"
               />
@@ -166,7 +166,7 @@
             </li>
             <li class="flex gap-[6px]">
               <img
-                src="@/assets/images/icons/Checklist-green-circle.svg"
+                src="/src/assets/images/icons/Checklist-green-circle.svg"
                 class="flex size-6 shrink-0"
                 alt="icon"
               />
@@ -176,7 +176,7 @@
             </li>
             <li class="flex gap-[6px]">
               <img
-                src="@/assets/images/icons/Checklist-green-circle.svg"
+                src="/src/assets/images/icons/Checklist-green-circle.svg"
                 class="flex size-6 shrink-0"
                 alt="icon"
               />
@@ -186,7 +186,7 @@
             </li>
             <li class="flex gap-[6px]">
               <img
-                src="@/assets/images/icons/Checklist-green-circle.svg"
+                src="/src/assets/images/icons/Checklist-green-circle.svg"
                 class="flex size-6 shrink-0"
                 alt="icon"
               />
@@ -196,7 +196,7 @@
             </li>
             <li class="flex gap-[6px]">
               <img
-                src="@/assets/images/icons/Checklist-green-circle.svg"
+                src="/src/assets/images/icons/Checklist-green-circle.svg"
                 class="flex size-6 shrink-0"
                 alt="icon"
               />

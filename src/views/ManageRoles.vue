@@ -6,7 +6,7 @@
           <div class="flex flex-col gap-[6px]">
             <p class="flex items-center gap-[6px]">
               <img
-                src="@/assets/images/icons/profile-circle-black.svg"
+                src="/src/assets/images/icons/profile-circle-black.svg"
                 class="size-6 flex shrink-0"
                 alt="icon"
               />
@@ -17,7 +17,7 @@
           <router-link to="/add-roles" class="btn btn-primary font-semibold">
             Add New
             <img
-              src="@/assets/images/icons/add-square-white.svg"
+              src="/src/assets/images/icons/add-square-white.svg"
               class="flex sixe-6 shrink-0"
               alt="icon"
             />
@@ -32,7 +32,7 @@
           <!-- Loading State -->
           <div v-if="loading" class="flex flex-col flex-1 items-center justify-center gap-4">
             <img
-              src="@/assets/images/icons/loading.svg"
+              src="/src/assets/images/icons/loading.svg"
               class="size-12 animate-spin"
               alt="loading"
             />
@@ -41,7 +41,11 @@
 
           <!-- Error State -->
           <div v-else-if="error" class="flex flex-col flex-1 items-center justify-center gap-4">
-            <img src="@/assets/images/icons/close-circle-black.svg" class="size-12" alt="error" />
+            <img
+              src="/src/assets/images/icons/close-circle-black.svg"
+              class="size-12"
+              alt="error"
+            />
             <p class="font-semibold text-red-500">{{ error }}</p>
             <button @click="rolesStore.fetchRoles()" class="btn btn-primary font-semibold">
               Try Again
@@ -55,7 +59,7 @@
             class="flex flex-col flex-1 items-center justify-center rounded-[20px] border-dashed border-2 border-monday-gray gap-6"
           >
             <img
-              src="@/assets/images/icons/document-text-grey.svg"
+              src="/src/assets/images/icons/document-text-grey.svg"
               class="size-[52px]"
               alt="icon"
             />
@@ -70,7 +74,7 @@
                     class="flex size-16 rounded-2xl bg-monday-gray-background items-center justify-center overflow-hidden"
                   >
                     <img
-                      src="@/assets/images/icons/user-octagon-grey.svg"
+                      src="/src/assets/images/icons/user-octagon-grey.svg"
                       class="size-6 object-contain"
                       alt="icon"
                     />
@@ -81,7 +85,7 @@
                 </div>
                 <div class="flex items-center gap-2 w-full">
                   <img
-                    src="@/assets/images/icons/profile-2user-black.svg"
+                    src="/src/assets/images/icons/profile-2user-black.svg"
                     class="size-6 flex shrink-0"
                     alt="icon"
                   />
@@ -92,7 +96,7 @@
                   class="btn btn-black min-w-[130px] font-semibold"
                 >
                   <img
-                    src="@/assets/images/icons/edit-white.svg"
+                    src="/src/assets/images/icons/edit-white.svg"
                     class="flex size-6 shrink-0"
                     alt="icon"
                   />

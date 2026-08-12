@@ -23,7 +23,7 @@
       <slot></slot>
     </select>
     <img
-      src="@/assets/images/icons/arrow-down-grey.svg"
+      src="/src/assets/images/icons/arrow-down-grey.svg"
       class="absolute transform -translate-y-1/2 top-1/2 right-6 size-6"
       alt="icon"
     />

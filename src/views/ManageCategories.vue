@@ -6,7 +6,7 @@
           <div class="flex flex-col gap-[6px]">
             <p class="flex items-center gap-[6px]">
               <img
-                src="@/assets/images/icons/note-2-black.svg"
+                src="/src/assets/images/icons/note-2-black.svg"
                 class="size-6 flex shrink-0"
                 alt="icon"
               />
@@ -19,7 +19,7 @@
           <router-link to="/add-categories" class="btn btn-primary font-semibold">
             Add New
             <img
-              src="@/assets/images/icons/add-square-white.svg"
+              src="/src/assets/images/icons/add-square-white.svg"
               class="flex sixe-6 shrink-0"
               alt="icon"
             />
@@ -89,7 +89,7 @@
                 </div>
                 <div class="flex items-center gap-2 w-full">
                   <img
-                    src="@/assets/images/icons/bag-black.svg"
+                    src="/src/assets/images/icons/bag-black.svg"
                     class="size-6 flex shrink-0"
                     alt="icon"
                   />

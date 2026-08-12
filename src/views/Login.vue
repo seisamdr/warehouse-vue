@@ -9,7 +9,7 @@
       </p>
       <div class="flex flex-1 overflow-hidden rounded-tl-[20px]">
         <img
-          src="@/assets/images/backgrounds/bg-image-1.png"
+          src="/src/assets/images/backgrounds/bg-image-1.png"
           class="size-full object-cover object-left-top"
           alt="image"
         />
@@ -20,7 +20,7 @@
         @submit.prevent="handleLogin"
         class="flex flex-col w-[435px] shrink-0 rounded-3xl gap-10 p-6 bg-white"
       >
-        <img src="@/assets/images/logos/logo.svg" class="w-[203px] mx-auto" alt="logo" />
+        <img src="/src/assets/images/logos/logo.svg" class="w-[203px] mx-auto" alt="logo" />
         <div class="flex flex-col gap-[30px]">
           <div class="flex flex-col gap-3 text-center">
             <p class="font-semibold text-2xl">Hey🙌🏻, Welcome Back!</p>
@@ -37,7 +37,7 @@
             <FormInput
               v-model="form.email"
               label="Email Address"
-              icon="@/assets/images/icons/sms-grey.svg"
+              icon="/src/assets/images/icons/sms-grey.svg"
               required="true"
               type="email"
               :disabled="loading"
@@ -45,7 +45,7 @@
             <FormInput
               v-model="form.password"
               label="Password"
-              icon="@/assets/images/icons/lock-grey.svg"
+              icon="/src/assets/images/icons/lock-grey.svg"
               required="true"
               :type="showPassword ? 'text' : 'password'"
               :disabled="loading"

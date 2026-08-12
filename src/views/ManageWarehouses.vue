@@ -6,7 +6,7 @@
           <div class="flex flex-col gap-[6px]">
             <p class="flex items-center gap-[6px]">
               <img
-                src="@/assets/images/icons/buildings-2-black.svg"
+                src="/src/assets/images/icons/buildings-2-black.svg"
                 class="size-6 flex shrink-0"
                 alt="icon"
               />
@@ -19,7 +19,7 @@
           <router-link to="/add-warehouses" class="btn btn-primary font-semibold">
             Add New
             <img
-              src="@/assets/images/icons/add-square-white.svg"
+              src="/src/assets/images/icons/add-square-white.svg"
               class="flex sixe-6 shrink-0"
               alt="icon"
             />
@@ -61,7 +61,7 @@
                 </div>
                 <div class="flex items-center gap-2 w-full justify-center">
                   <img
-                    src="@/assets/images/icons/bag-black.svg"
+                    src="/src/assets/images/icons/bag-black.svg"
                     class="size-6 flex shrink-0"
                     alt="icon"
                   />
@@ -81,7 +81,7 @@
                     class="btn btn-black min-w-[130px] font-semibold"
                   >
                     <img
-                      src="@/assets/images/icons/edit-white.svg"
+                      src="/src/assets/images/icons/edit-white.svg"
                       class="flex size-6 shrink-0"
                       alt="icon"
                     />
@@ -97,7 +97,7 @@
             class="hidden flex flex-col flex-1 items-center justify-center rounded-[20px] border-dashed border-2 border-monday-gray gap-6"
           >
             <img
-              src="@/assets/images/icons/document-text-grey.svg"
+              src="/src/assets/images/icons/document-text-grey.svg"
               class="size-[52px]"
               alt="icon"
             />

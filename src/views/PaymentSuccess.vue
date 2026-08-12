@@ -9,7 +9,11 @@
       <div class="flex flex-col items-center justify-center min-h-[400px] gap-6">
         <!-- Success Icon -->
         <div class="flex size-24 rounded-full bg-green-100 items-center justify-center">
-          <img src="@/assets/images/icons/transaction-success.svg" class="size-12" alt="success" />
+          <img
+            src="/src/assets/images/icons/transaction-success.svg"
+            class="size-12"
+            alt="success"
+          />
         </div>
 
         <!-- Success Message -->
