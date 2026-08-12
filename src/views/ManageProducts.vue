@@ -212,7 +212,9 @@ export default {
     const error = computed(() => productStore.error)
 
     const filteredProducts = computed(() => {
-      return products.value
+      const data = products.value?.products?.data?.products
+
+      return Array.isArray(data) ? data : []
     })
 
     const totalPages = computed(() => Math.ceil(filteredProducts.value.length / itemsPerPage.value))
