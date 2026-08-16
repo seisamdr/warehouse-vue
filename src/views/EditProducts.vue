@@ -166,7 +166,7 @@
           </div>
         </form>
         <div class="flex flex-col w-[392px] shrink-0 h-fit rounded-3xl p-[18px] gap-3 bg-white">
-          <p class="font-semibold">Quick Guide to Edit Products</p>
+          <p class="font-semibold text-lg">Quick Guide to Edit Products</p>
           <ul class="flex flex-col gap-4">
             <li class="flex gap-[6px]">
               <img
@@ -174,16 +174,8 @@
                 class="flex size-6 shrink-0"
                 alt="icon"
               />
-              <p class="font-medium leading-[140%]">Update Product Photos if Necessary</p>
-            </li>
-            <li class="flex gap-[6px]">
-              <img
-                src="/src/assets/images/icons/Checklist-green-circle.svg"
-                class="flex size-6 shrink-0"
-                alt="icon"
-              />
               <p class="font-medium leading-[140%]">
-                Use a Clear and Relevant Product Name for Clarity Lorem Ipsum
+                Update product photos if needed to keep the display fresh and appealing
               </p>
             </li>
             <li class="flex gap-[6px]">
@@ -193,7 +185,7 @@
                 alt="icon"
               />
               <p class="font-medium leading-[140%]">
-                Verify the Product Category is Correct and Accurate Lorem Ipsum
+                Ensure the product name is clear, relevant, and easy to recognize
               </p>
             </li>
             <li class="flex gap-[6px]">
@@ -203,7 +195,7 @@
                 alt="icon"
               />
               <p class="font-medium leading-[140%]">
-                Replace Images if They Exceed 2MB in Size Lorem Ipsum Color
+                Verify the product category is correct for proper classification
               </p>
             </li>
             <li class="flex gap-[6px]">
@@ -213,7 +205,17 @@
                 alt="icon"
               />
               <p class="font-medium leading-[140%]">
-                Double-Check Everything Before Saving Changes Lorem Ipsum Color
+                Replace images if they exceed 2MB to ensure smooth uploads
+              </p>
+            </li>
+            <li class="flex gap-[6px]">
+              <img
+                src="/src/assets/images/icons/Checklist-green-circle.svg"
+                class="flex size-6 shrink-0"
+                alt="icon"
+              />
+              <p class="font-medium leading-[140%]">
+                Double-check all changes carefully before saving
               </p>
             </li>
           </ul>

@@ -74,7 +74,7 @@
           </div>
         </form>
         <div class="flex flex-col w-[392px] shrink-0 h-fit rounded-3xl p-[18px] gap-3 bg-white">
-          <p class="font-semibold">Quick Guide to Add New Merchant</p>
+          <p class="font-semibold text-lg">Quick Guide to Add New Merchant</p>
           <ul class="flex flex-col gap-4">
             <li class="flex gap-[6px]">
               <img
@@ -83,7 +83,7 @@
                 alt="icon"
               />
               <p class="font-medium leading-[140%]">
-                Use a clear and recognizable merchant name Lorem Ipsum mix amet
+                Enter a clear and recognizable merchant name for easy identification
               </p>
             </li>
             <li class="flex gap-[6px]">
@@ -93,7 +93,7 @@
                 alt="icon"
               />
               <p class="font-medium leading-[140%]">
-                Ensure the phone number is valid and reachable dummy text
+                Provide a valid phone number that can be used for contact purposes
               </p>
             </li>
             <li class="flex gap-[6px]">
@@ -103,7 +103,7 @@
                 alt="icon"
               />
               <p class="font-medium leading-[140%]">
-                Assign a responsible and available keeper Lorem Ipsum simply Text
+                Assign a responsible and available keeper to manage the merchant
               </p>
             </li>
             <li class="flex gap-[6px]">
@@ -113,7 +113,7 @@
                 alt="icon"
               />
               <p class="font-medium leading-[140%]">
-                Double-check the warehouse address for accuracy Lorem Ipsum
+                Fill in the complete and accurate merchant address details
               </p>
             </li>
             <li class="flex gap-[6px]">
@@ -123,7 +123,7 @@
                 alt="icon"
               />
               <p class="font-medium leading-[140%]">
-                Upload a high-quality merchant photo for easy identification
+                Upload a high-quality image that represents the merchant properly
               </p>
             </li>
           </ul>

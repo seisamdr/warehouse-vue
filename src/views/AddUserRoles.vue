@@ -47,7 +47,7 @@
                 alt="icon"
               />
               <p class="font-medium leading-[140%]">
-                Select an available username from the list of registered users
+                Select a user from the available list to assign a role
               </p>
             </li>
             <li class="flex gap-[6px]">
@@ -57,7 +57,7 @@
                 alt="icon"
               />
               <p class="font-medium leading-[140%]">
-                Choose the most appropriate role based on the user's job responsibilities
+                Choose the appropriate role based on the user's job responsibilities
               </p>
             </li>
             <li class="flex gap-[6px]">
@@ -67,7 +67,7 @@
                 alt="icon"
               />
               <p class="font-medium leading-[140%]">
-                Review all user details and role permissions carefully before assigning
+                Review user details and role permissions before assigning
               </p>
             </li>
             <li class="flex gap-[6px]">
@@ -77,7 +77,7 @@
                 alt="icon"
               />
               <p class="font-medium leading-[140%]">
-                Double-check to avoid assigning the wrong role or permissions
+                Double-check to avoid assigning incorrect roles or permissions
               </p>
             </li>
             <li class="flex gap-[6px]">
@@ -87,7 +87,7 @@
                 alt="icon"
               />
               <p class="font-medium leading-[140%]">
-                Ensure the role is assigned to the correct person before finalizing
+                Confirm the role is assigned to the right person before saving
               </p>
             </li>
           </ul>
@@ -156,13 +156,16 @@ export default {
 
       loading.value = true
 
-      const selectedUser = availableUsers.value.find((user) => user.id === formData.selectedUser)
-      const selectedRole = availableRoles.value.find((role) => role.id === formData.selectedRole)
+      const userId = parseInt(formData.selectedUser)
+      const roleId = parseInt(formData.selectedRole)
+
+      const selectedUser = availableUsers.value.find((user) => user.id === userId)
+      const selectedRole = availableRoles.value.find((role) => role.id === roleId)
 
       try {
         const userRoleData = {
-          user_id: parseInt(formData.selectedUser),
-          role_id: parseInt(formData.selectedRole),
+          user_id: userId,
+          role_id: roleId,
         }
         await createUserRole(userRoleData)
         alert(`Role "${selectedRole?.name}" assigned to "${selectedUser?.name}" successfully!`)

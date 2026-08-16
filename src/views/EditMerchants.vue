@@ -85,7 +85,7 @@
           </div>
         </form>
         <div class="flex flex-col w-[392px] shrink-0 h-fit rounded-3xl p-[18px] gap-3 bg-white">
-          <p class="font-semibold">Quick Guide to Edit Merchant</p>
+          <p class="font-semibold text-lg">Quick Guide to Edit Merchant</p>
           <ul class="flex flex-col gap-4">
             <li class="flex gap-[6px]">
               <img
@@ -94,7 +94,7 @@
                 alt="icon"
               />
               <p class="font-medium leading-[140%]">
-                Ensure merchant information is updated accurately to maintain data consistency
+                Update the merchant name if needed for better identification
               </p>
             </li>
             <li class="flex gap-[6px]">
@@ -104,7 +104,7 @@
                 alt="icon"
               />
               <p class="font-medium leading-[140%]">
-                Make sure the phone number is active to ensure seamless communication
+                Verify and update the contact phone number for accurate communication
               </p>
             </li>
             <li class="flex gap-[6px]">
@@ -114,7 +114,7 @@
                 alt="icon"
               />
               <p class="font-medium leading-[140%]">
-                Verify the assigned keeper if there has been a change Lorem Ipsum
+                Update the assigned keeper if there has been any change
               </p>
             </li>
             <li class="flex gap-[6px]">
@@ -134,7 +134,7 @@
                 alt="icon"
               />
               <p class="font-medium leading-[140%]">
-                Ensure you use a recent photo to Lorem maintain up-to-date
+                Replace the merchant image if needed for better representation
               </p>
             </li>
           </ul>

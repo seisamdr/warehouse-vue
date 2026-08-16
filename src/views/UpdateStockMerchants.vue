@@ -114,7 +114,7 @@
           </form>
         </div>
         <div class="flex flex-col w-[392px] shrink-0 h-fit rounded-3xl p-[18px] gap-3 bg-white">
-          <p class="font-semibold">Quick Guide to Add Stock Product</p>
+          <p class="font-semibold text-lg">Quick Guide to Update Stock</p>
           <ul class="flex flex-col gap-4">
             <li class="flex gap-[6px]">
               <img
@@ -123,7 +123,7 @@
                 alt="icon"
               />
               <p class="font-medium leading-[140%]">
-                Thoroughly review warehouse and product details to ensure accuracy
+                Review warehouse and product details carefully before updating stock
               </p>
             </li>
             <li class="flex gap-[6px]">
@@ -133,8 +133,7 @@
                 alt="icon"
               />
               <p class="font-medium leading-[140%]">
-                Input the stock quantity accurately to maintain precise inventory records and avoid
-                discrepancies
+                Enter the stock quantity accurately to maintain precise inventory records
               </p>
             </li>
             <li class="flex gap-[6px]">
@@ -144,7 +143,7 @@
                 alt="icon"
               />
               <p class="font-medium leading-[140%]">
-                Verify and confirm merchant details to ensure accuracy
+                Verify merchant details to ensure the product is assigned correctly
               </p>
             </li>
             <li class="flex gap-[6px]">
@@ -154,7 +153,7 @@
                 alt="icon"
               />
               <p class="font-medium leading-[140%]">
-                Double-check all details to ensure accuracy before saving
+                Double-check all information before saving to avoid errors
               </p>
             </li>
             <li class="flex gap-[6px]">
@@ -164,7 +163,7 @@
                 alt="icon"
               />
               <p class="font-medium leading-[140%]">
-                Save the changes to update the Lorem information and ensure all dummy text
+                Save the changes to update the stock information
               </p>
             </li>
           </ul>
@@ -195,6 +194,7 @@ export default {
       merchantDetails: {
         name: '',
         keeper: '',
+        photo: '',
       },
       productDetails: {
         name: '',
@@ -232,6 +232,7 @@ export default {
       this.merchantDetails = {
         name: query.merchant_name || 'Merchant tidak ditemukan',
         keeper: query.keeper_name || 'Keeper tidak ditemukan',
+        photo: query.merchant_photo || '',
       }
 
       this.productDetails = {

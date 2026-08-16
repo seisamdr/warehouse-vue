@@ -66,7 +66,7 @@
           </form>
         </div>
         <div class="flex flex-col w-[392px] shrink-0 h-fit rounded-3xl p-[18px] gap-3 bg-white">
-          <p class="font-semibold">Quick Guide to Assign New Product</p>
+          <p class="font-semibold text-lg">Quick Guide to Assign Product to Warehouse</p>
           <ul class="flex flex-col gap-4">
             <li class="flex gap-[6px]">
               <img
@@ -75,7 +75,7 @@
                 alt="icon"
               />
               <p class="font-medium leading-[140%]">
-                Make Sure the Warehouse Details Are Correct Lorem Ipsum is Simply Text
+                Verify the warehouse details to ensure the product is assigned correctly
               </p>
             </li>
             <li class="flex gap-[6px]">
@@ -85,7 +85,7 @@
                 alt="icon"
               />
               <p class="font-medium leading-[140%]">
-                Enter the Product Details Correctly and Accurately Lorem Ipsum Color amet
+                Enter the product details accurately for proper inventory tracking
               </p>
             </li>
             <li class="flex gap-[6px]">
@@ -95,7 +95,7 @@
                 alt="icon"
               />
               <p class="font-medium leading-[140%]">
-                Specify the Stock Quantity to Be Added Accurately is dummy text
+                Specify the stock quantity to be added with precision
               </p>
             </li>
             <li class="flex gap-[6px]">
@@ -105,7 +105,7 @@
                 alt="icon"
               />
               <p class="font-medium leading-[140%]">
-                Review the Entered Information for Accuracy Lorem Ipsum Dummy
+                Review all entered information for accuracy before submission
               </p>
             </li>
             <li class="flex gap-[6px]">
@@ -115,7 +115,7 @@
                 alt="icon"
               />
               <p class="font-medium leading-[140%]">
-                Click "Create Now" to complete the process Lorem Ipsum
+                Click "Assign Now" to complete the assignment process
               </p>
             </li>
           </ul>

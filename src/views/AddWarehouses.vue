@@ -106,7 +106,7 @@
           </div>
         </form>
         <div class="flex flex-col w-[392px] shrink-0 h-fit rounded-3xl p-[18px] gap-3 bg-white">
-          <p class="font-semibold">Quick Guide to Add New Warehouse</p>
+          <p class="font-semibold text-lg">Quick Guide to Add New Warehouse</p>
           <ul class="flex flex-col gap-4">
             <li class="flex gap-[6px]">
               <img
@@ -115,7 +115,7 @@
                 alt="icon"
               />
               <p class="font-medium leading-[140%]">
-                Enter a Clear and Descriptive Warehouse Name Lorem Ipsum Color Mix Amet
+                Enter a clear and descriptive warehouse name for easy identification
               </p>
             </li>
             <li class="flex gap-[6px]">
@@ -125,7 +125,7 @@
                 alt="icon"
               />
               <p class="font-medium leading-[140%]">
-                Provide a Valid Phone Number for Contact Lorem Ipsum is text simply
+                Provide a valid phone number that can be used for contact purposes
               </p>
             </li>
             <li class="flex gap-[6px]">
@@ -135,7 +135,7 @@
                 alt="icon"
               />
               <p class="font-medium leading-[140%]">
-                Accurately Input the Complete Lorem Warehouse Address Lorem Ipsum
+                Fill in the complete and accurate warehouse address details
               </p>
             </li>
             <li class="flex gap-[6px]">
@@ -145,7 +145,7 @@
                 alt="icon"
               />
               <p class="font-medium leading-[140%]">
-                Upload an Appropriate Warehouse Image Dummy Lorem Ipsum
+                Upload a relevant image that represents the warehouse properly
               </p>
             </li>
             <li class="flex gap-[6px]">
@@ -155,7 +155,7 @@
                 alt="icon"
               />
               <p class="font-medium leading-[140%]">
-                Save and Verify the Warehouse Ipsum Information text simply
+                Double-check all information before saving to ensure accuracy
               </p>
             </li>
           </ul>
@@ -201,13 +201,13 @@ export default {
 
       // Validate file size (2MB limit)
       if (file.size > 2 * 1024 * 1024) {
-        this.error = 'Ukuran file terlalu besar. Maksimal 2MB.'
+        this.error = 'File size too large. Maximum 2MB.'
         return
       }
 
       // Validate file type
       if (!file.type.startsWith('image/')) {
-        this.error = 'File harus berupa gambar.'
+        this.error = 'File must be an image.'
         return
       }
 
@@ -217,7 +217,7 @@ export default {
       // Show preview immediately
       const reader = new FileReader()
       reader.onload = (e) => {
-        imagePreview.value = e.target.result
+        this.imagePreview = e.target.result
       }
       reader.readAsDataURL(file)
     },
@@ -231,7 +231,7 @@ export default {
 
     async uploadWarehouseImageToServer() {
       if (!this.selectedFile) {
-        throw new Error('Tidak ada gambar yang dipilih')
+        throw new Error('No image selected')
       }
 
       this.imageUploading = true
@@ -252,13 +252,14 @@ export default {
         this.uploadProgress = 100
 
         if (!imageUrl) {
-          throw new Error('URL gambar tidak valid dari server')
+          throw new Error('Invalid image URL from server')
         }
 
-        return (this.form.photo = imageUrl)
+        this.form.photo = imageUrl
+        return imageUrl
       } catch (uploadError) {
         console.error('Error uploading image:', uploadError)
-        throw new Error(`Gagal mengupload gambar: ${uploadError.message}`)
+        throw new Error(`Failed to upload image: ${uploadError.message}`)
       } finally {
         this.imageUploading = false
         this.uploadProgress = 0
@@ -283,12 +284,12 @@ export default {
           photo: this.form.photo,
         }
 
-        const response = await createWarehouse(warehouseData)
+        await createWarehouse(warehouseData)
         alert('Warehouse created successfully!')
         this.$router.push('/warehouses')
       } catch (error) {
         console.error('Error submitting form:', error)
-        alert(`Gagal membuat gudang: ${error.message}`)
+        alert(`Failed to create warehouse: ${error.message}`)
       } finally {
         this.isSubmitting = false
       }

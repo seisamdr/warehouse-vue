@@ -85,7 +85,7 @@
           </div>
         </form>
         <div class="flex flex-col w-[392px] shrink-0 h-fit rounded-3xl p-[18px] gap-3 bg-white">
-          <p class="font-semibold">Quick Guide to Add New Category</p>
+          <p class="font-semibold text-lg">Quick Guide to Add New Category</p>
           <ul class="flex flex-col gap-4">
             <li class="flex gap-[6px]">
               <img
@@ -94,7 +94,8 @@
                 alt="icon"
               />
               <p class="font-medium leading-[140%]">
-                Ensure the Category Name is Relevant and Clear Lorem Ipsum
+                Enter a clear and relevant category name that accurately represents the product
+                grouping
               </p>
             </li>
             <li class="flex gap-[6px]">
@@ -104,7 +105,7 @@
                 alt="icon"
               />
               <p class="font-medium leading-[140%]">
-                Verify the Image is Appropriate and High-Quality Lorem Ipsum
+                Upload an appropriate and high-quality image that visually represents the category
               </p>
             </li>
             <li class="flex gap-[6px]">
@@ -114,7 +115,7 @@
                 alt="icon"
               />
               <p class="font-medium leading-[140%]">
-                Choose a User-Friendly and Clear Tagline Lorem Ipsum simply
+                Add a user-friendly tagline that provides a brief description of the category
               </p>
             </li>
             <li class="flex gap-[6px]">
@@ -124,7 +125,7 @@
                 alt="icon"
               />
               <p class="font-medium leading-[140%]">
-                Check for Duplicates to Avoid Lorem Redundancy Lorem Ipsum
+                Check for duplicate categories to maintain data integrity and avoid redundancy
               </p>
             </li>
             <li class="flex gap-[6px]">
@@ -133,7 +134,9 @@
                 class="flex size-6 shrink-0"
                 alt="icon"
               />
-              <p class="font-medium leading-[140%]">Preview the Category Carefully</p>
+              <p class="font-medium leading-[140%]">
+                Review all information carefully before submitting to ensure accuracy
+              </p>
             </li>
           </ul>
         </div>

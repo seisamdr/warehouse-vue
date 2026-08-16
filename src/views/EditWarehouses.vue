@@ -90,7 +90,7 @@
           </div>
         </form>
         <div class="flex flex-col w-[392px] shrink-0 h-fit rounded-3xl p-[18px] gap-3 bg-white">
-          <p class="font-semibold">Quick Guide to Edit Warehouse</p>
+          <p class="font-semibold text-lg">Quick Guide to Edit Warehouse</p>
           <ul class="flex flex-col gap-4">
             <li class="flex gap-[6px]">
               <img
@@ -99,7 +99,7 @@
                 alt="icon"
               />
               <p class="font-medium leading-[140%]">
-                Update the Warehouse Name if Lorem Necessary Ipsum Dummy
+                Update the warehouse name if needed for better identification
               </p>
             </li>
             <li class="flex gap-[6px]">
@@ -109,7 +109,7 @@
                 alt="icon"
               />
               <p class="font-medium leading-[140%]">
-                Verify and Update the Contact Phone Number text Lorem Ipsum
+                Verify and update the contact phone number for accurate communication
               </p>
             </li>
             <li class="flex gap-[6px]">
@@ -119,7 +119,7 @@
                 alt="icon"
               />
               <p class="font-medium leading-[140%]">
-                Ensure the Warehouse Address is Correct and Complete Color det amet
+                Ensure the warehouse address is correct and complete
               </p>
             </li>
             <li class="flex gap-[6px]">
@@ -129,7 +129,7 @@
                 alt="icon"
               />
               <p class="font-medium leading-[140%]">
-                Replace the Warehouse Image if Needed for Accuracy Lorem Ipsum
+                Replace the warehouse image if needed for better representation
               </p>
             </li>
             <li class="flex gap-[6px]">
@@ -138,7 +138,9 @@
                 class="flex size-6 shrink-0"
                 alt="icon"
               />
-              <p class="font-medium leading-[140%]">Double-Check Everything Lorem Ipsum</p>
+              <p class="font-medium leading-[140%]">
+                Double-check all changes before saving to ensure accuracy
+              </p>
             </li>
           </ul>
         </div>

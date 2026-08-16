@@ -75,5 +75,6 @@ export default {
   getUserRoles,
   createUserRole,
   getUserRoleById,
+  updateUserRole,
   removeAuthToken,
 }

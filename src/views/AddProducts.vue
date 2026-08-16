@@ -167,7 +167,7 @@
           </div>
         </form>
         <div class="flex flex-col w-[392px] shrink-0 h-fit rounded-3xl p-[18px] gap-3 bg-white">
-          <p class="font-semibold">Quick Guide to Adding Products</p>
+          <p class="font-semibold text-lg">Quick Guide to Adding Products</p>
           <ul class="flex flex-col gap-4">
             <li class="flex gap-[6px]">
               <img
@@ -176,7 +176,7 @@
                 alt="icon"
               />
               <p class="font-medium leading-[140%]">
-                Use Clear and High-Quality Photos for Better Results lorem ipsum mix
+                Use clear and high-quality photos to make the product more appealing
               </p>
             </li>
             <li class="flex gap-[6px]">
@@ -186,7 +186,7 @@
                 alt="icon"
               />
               <p class="font-medium leading-[140%]">
-                Ensure the Product Name is Relevant and Descriptive less lorem ipsum
+                Ensure the product name is relevant, descriptive, and easy to recognize
               </p>
             </li>
             <li class="flex gap-[6px]">
@@ -196,7 +196,7 @@
                 alt="icon"
               />
               <p class="font-medium leading-[140%]">
-                Choose the Right Product Category for Accuracy lorem ipsum simply
+                Choose the correct product category to ensure accurate classification
               </p>
             </li>
             <li class="flex gap-[6px]">
@@ -206,7 +206,7 @@
                 alt="icon"
               />
               <p class="font-medium leading-[140%]">
-                Maximum Image Size of 2MB for Uploads lorem ipsum text simply
+                Keep image size under 2MB to ensure smooth and fast uploads
               </p>
             </li>
             <li class="flex gap-[6px]">
@@ -216,7 +216,7 @@
                 alt="icon"
               />
               <p class="font-medium leading-[140%]">
-                Review Everything Carefully Before Publishing lorem ipsum color amet
+                Review all product details carefully before publishing
               </p>
             </li>
           </ul>

@@ -24,7 +24,7 @@
           </div>
         </form>
         <div class="flex flex-col w-[392px] shrink-0 h-fit rounded-3xl p-[18px] gap-3 bg-white">
-          <p class="font-semibold">Quick Guide to Edit Role</p>
+          <p class="font-semibold text-lg">Quick Guide to Edit User Role</p>
           <ul class="flex flex-col gap-4">
             <li class="flex gap-[6px]">
               <img
@@ -33,7 +33,7 @@
                 alt="icon"
               />
               <p class="font-medium leading-[140%]">
-                Modify the role name if necessary to ensure clarity and accurate
+                Select the user whose role you want to update from the list
               </p>
             </li>
             <li class="flex gap-[6px]">
@@ -43,8 +43,7 @@
                 alt="icon"
               />
               <p class="font-medium leading-[140%]">
-                Modify permissions as needed to ensure accurate access control and proper role
-                functionality lorem ipsum
+                Choose the new role that best fits the user's current responsibilities
               </p>
             </li>
             <li class="flex gap-[6px]">
@@ -54,7 +53,7 @@
                 alt="icon"
               />
               <p class="font-medium leading-[140%]">
-                Verify that role responsibilities align with expectations to maintain clarity
+                Review the user's current permissions before making changes
               </p>
             </li>
             <li class="flex gap-[6px]">
@@ -64,7 +63,7 @@
                 alt="icon"
               />
               <p class="font-medium leading-[140%]">
-                Carefully review all changes before saving to ensure accuracy and prevent any errors
+                Double-check that the new role has the appropriate access levels
               </p>
             </li>
             <li class="flex gap-[6px]">
@@ -74,7 +73,7 @@
                 alt="icon"
               />
               <p class="font-medium leading-[140%]">
-                Avoid assigning duplicate roles to maintain clarity, prevent confusion
+                Confirm all changes before saving to avoid incorrect assignments
               </p>
             </li>
           </ul>

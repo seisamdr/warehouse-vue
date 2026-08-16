@@ -10,7 +10,7 @@
                 class="size-6 flex shrink-0"
                 alt="icon"
               />
-              <span class="font-semibold text-2xl">{{ totalRecords }} Total Warehouses</span>
+              <span class="font-semibold text-2xl">{{ warehouses.length }} Total Warehouses</span>
             </p>
             <p class="font-semibold text-lg text-monday-gray">
               View and update your Warehouses list here.
@@ -20,7 +20,7 @@
             Add New
             <img
               src="/src/assets/images/icons/add-square-white.svg"
-              class="flex sixe-6 shrink-0"
+              class="flex size-6 shrink-0"
               alt="icon"
             />
           </router-link>
@@ -31,9 +31,35 @@
             <p class="font-semibold text-xl">All Warehouses</p>
           </div>
 
+          <!-- Loading State -->
           <div
-            v-if="warehouses.length === 0"
-            class="flex flex-col flex-1 items-center justify-center rounded-[20px] border-dashed border-2 border-monday-gray gap-6"
+            v-if="loading"
+            class="flex flex-col flex-1 items-center justify-center rounded-[20px] border-dashed border-2 border-monday-gray gap-6 py-12"
+          >
+            <div class="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600"></div>
+            <p class="font-semibold text-monday-gray">Memuat data gudang...</p>
+          </div>
+
+          <!-- Error State -->
+          <div
+            v-else-if="error"
+            class="flex flex-col flex-1 items-center justify-center rounded-[20px] border-dashed border-2 border-red-300 gap-6 py-12"
+          >
+            <img
+              src="/src/assets/images/icons/close-circle-black.svg"
+              class="size-[52px]"
+              alt="icon"
+            />
+            <p class="font-semibold text-red-600">{{ error }}</p>
+            <button @click="fetchWarehouses" class="btn btn-primary font-semibold">
+              Coba Lagi
+            </button>
+          </div>
+
+          <!-- Empty State -->
+          <div
+            v-else-if="warehouses.length === 0"
+            class="flex flex-col flex-1 items-center justify-center rounded-[20px] border-dashed border-2 border-monday-gray gap-6 py-12"
           >
             <img
               src="/src/assets/images/icons/document-text-grey.svg"
@@ -43,19 +69,24 @@
             <p class="font-semibold text-monday-gray">Oops, it looks like there's no data yet.</p>
           </div>
 
+          <!-- Data List -->
           <div v-else class="flex flex-col gap-5">
-            <template v-for="warehouse in warehouses" :key="warehouse.id">
+            <template v-for="warehouse in paginatedWarehouses" :key="warehouse.id">
               <div class="card flex items-center justify-between gap-3">
                 <div class="flex items-center gap-3 w-[360px] shrink-0">
                   <div
                     class="flex size-[86px] rounded-2xl bg-monday-background items-center justify-center overflow-hidden"
                   >
-                    <img :src="warehouse.photo" class="size-full object-contain" alt="icon" />
+                    <img
+                      :src="warehouse.photo || '/src/assets/images/icons/gallery-grey.svg'"
+                      class="size-full object-contain"
+                      alt="icon"
+                    />
                   </div>
                   <div class="flex flex-col gap-2 flex-1">
                     <p class="font-semibold text-xl">{{ warehouse.name }}</p>
                     <p class="flex items-center gap-1 font-medium text-lg text-monday-gray">
-                      <span>{{ warehouse.phone }}</span>
+                      <span>{{ warehouse.phone || '-' }}</span>
                     </p>
                   </div>
                 </div>
@@ -66,7 +97,7 @@
                     alt="icon"
                   />
                   <p class="font-semibold text-lg text-nowrap">
-                    {{ warehouse.count_product }} Products
+                    {{ warehouse.count_product || 0 }} Products
                   </p>
                 </div>
                 <div class="flex items-center gap-4">
@@ -89,19 +120,67 @@
                   </router-link>
                 </div>
               </div>
-              <hr class="border-monday-border last:hidden" />
+              <hr
+                v-if="index < paginatedWarehouses.length - 1"
+                class="border-monday-border last:hidden"
+              />
             </template>
           </div>
-          <div
-            id="Empty-State"
-            class="hidden flex flex-col flex-1 items-center justify-center rounded-[20px] border-dashed border-2 border-monday-gray gap-6"
-          >
-            <img
-              src="/src/assets/images/icons/document-text-grey.svg"
-              class="size-[52px]"
-              alt="icon"
-            />
-            <p class="font-semibold text-monday-gray">Oops, it looks like there's no data yet.</p>
+        </div>
+
+        <!-- ✅ PAGINATION - Client Side (Layout Sebelahan) -->
+        <div
+          v-if="warehouses.length > 0"
+          class="flex items-center justify-between px-[18px] py-4 border-t border-monday-border"
+        >
+          <!-- KIRI: Showing + Dropdown (SEBELAHAN) -->
+          <div class="flex items-center gap-4">
+            <p class="font-medium text-monday-gray">
+              Showing {{ startIndex + 1 }}-{{ endIndex }} of {{ warehouses.length }} warehouses
+            </p>
+            <div class="flex items-center gap-2">
+              <select
+                v-model="itemsPerPage"
+                @change="onLimitChange"
+                class="px-3 py-2 rounded-xl border border-monday-border bg-white font-medium text-sm focus:outline-none focus:border-monday-blue cursor-pointer"
+              >
+                <option :value="5">5</option>
+                <option :value="10">10</option>
+                <option :value="20">20</option>
+                <option :value="50">50</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- KANAN: Pagination Buttons -->
+          <div class="flex items-center gap-2">
+            <button
+              @click="previousPage"
+              :disabled="currentPage === 1"
+              class="btn btn-primary-opacity font-semibold disabled:opacity-50 disabled:cursor-not-allowed px-4 py-2"
+            >
+              Previous
+            </button>
+            <button
+              v-for="page in totalPages"
+              :key="page"
+              @click="goToPage(page)"
+              :class="[
+                'px-4 py-2 rounded-2xl font-semibold transition-300',
+                page === currentPage
+                  ? 'bg-monday-blue text-white'
+                  : 'bg-monday-gray-background text-monday-gray hover:bg-monday-border',
+              ]"
+            >
+              {{ page }}
+            </button>
+            <button
+              @click="nextPage"
+              :disabled="currentPage === totalPages"
+              class="btn btn-primary-opacity font-semibold disabled:opacity-50 disabled:cursor-not-allowed px-4 py-2"
+            >
+              Next
+            </button>
           </div>
         </div>
       </section>
@@ -121,26 +200,69 @@ export default {
   data() {
     return {
       warehouses: [],
-      totalRecords: 0,
+      loading: false,
+      error: null,
+      currentPage: 1,
+      itemsPerPage: 5,
     }
+  },
+  computed: {
+    totalPages() {
+      return Math.ceil(this.warehouses.length / this.itemsPerPage)
+    },
+    startIndex() {
+      return (this.currentPage - 1) * this.itemsPerPage
+    },
+    endIndex() {
+      return Math.min(this.startIndex + this.itemsPerPage, this.warehouses.length)
+    },
+    paginatedWarehouses() {
+      return this.warehouses.slice(this.startIndex, this.endIndex)
+    },
   },
   async mounted() {
     await this.fetchWarehouses()
   },
   methods: {
     async fetchWarehouses() {
+      this.loading = true
+      this.error = null
+
       try {
         const response = await getWarehouses()
-        this.warehouses = response.data?.warehouses || response || []
-        this.totalRecords = response.data?.pagination.total_records || 0
+        const data = response.data?.warehouses || response.data || response || []
+        this.warehouses = Array.isArray(data) ? data : []
+        this.currentPage = 1
       } catch (error) {
         console.error('Error fetching warehouses:', error)
+        this.error = error.message || 'Gagal mengambil data gudang'
         this.warehouses = []
+      } finally {
+        this.loading = false
       }
     },
 
-    formatNumber(num) {
-      return new Intl.NumberFormat('en-US').format(num)
+    // ✅ Ketika limit berubah, reset ke halaman 1
+    onLimitChange() {
+      this.currentPage = 1
+    },
+
+    goToPage(page) {
+      if (page >= 1 && page <= this.totalPages) {
+        this.currentPage = page
+      }
+    },
+
+    nextPage() {
+      if (this.currentPage < this.totalPages) {
+        this.currentPage++
+      }
+    },
+
+    previousPage() {
+      if (this.currentPage > 1) {
+        this.currentPage--
+      }
     },
   },
 }

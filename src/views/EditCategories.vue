@@ -96,7 +96,7 @@
           </div>
         </form>
         <div class="flex flex-col w-[392px] shrink-0 h-fit rounded-3xl p-[18px] gap-3 bg-white">
-          <p class="font-semibold">Quick Guide to Edit Category</p>
+          <p class="font-semibold text-lg">Quick Guide to Edit Category</p>
           <ul class="flex flex-col gap-4">
             <li class="flex gap-[6px]">
               <img
@@ -104,7 +104,7 @@
                 class="flex size-6 shrink-0"
                 alt="icon"
               />
-              <p class="font-medium leading-[140%]">Update the Category Name if Necessary</p>
+              <p class="font-medium leading-[140%]">Update the category name if needed</p>
             </li>
             <li class="flex gap-[6px]">
               <img
@@ -113,7 +113,7 @@
                 alt="icon"
               />
               <p class="font-medium leading-[140%]">
-                Ensure the Name is Still Relevant and Accurate Lorem Ipsum Simply text
+                Ensure the name remains relevant and accurately describes the category
               </p>
             </li>
             <li class="flex gap-[6px]">
@@ -123,7 +123,7 @@
                 alt="icon"
               />
               <p class="font-medium leading-[140%]">
-                Verify the Image is Appropriate and Relevant Lorem Ipsum Color Text Mix
+                Verify the image is appropriate and represents the category well
               </p>
             </li>
             <li class="flex gap-[6px]">
@@ -133,7 +133,7 @@
                 alt="icon"
               />
               <p class="font-medium leading-[140%]">
-                Adjust the Parent Category if Needed for Accuracy Lorem Ipsum is Text Simply
+                Update the tagline if needed to better describe the category
               </p>
             </li>
             <li class="flex gap-[6px]">
@@ -142,7 +142,7 @@
                 class="flex size-6 shrink-0"
                 alt="icon"
               />
-              <p class="font-medium leading-[140%]">Double-Check Everything Before Saving</p>
+              <p class="font-medium leading-[140%]">Double-check everything before saving</p>
             </li>
           </ul>
         </div>

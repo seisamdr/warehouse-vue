@@ -22,7 +22,7 @@
             Add New
             <img
               src="/src/assets/images/icons/add-square-white.svg"
-              class="flex sixe-6 shrink-0"
+              class="flex size-6 shrink-0"
               alt="icon"
             />
           </a>
@@ -33,14 +33,40 @@
             <p class="font-semibold text-xl">All Products</p>
           </div>
 
-          <div v-if="filteredProducts.length > 0" class="flex flex-col gap-5">
+          <!-- Loading State -->
+          <div v-if="loading" class="flex flex-col items-center justify-center py-12">
+            <img
+              src="/src/assets/images/icons/loading.svg"
+              class="size-12 animate-spin"
+              alt="loading"
+            />
+            <p class="font-medium text-monday-gray mt-4">Loading products...</p>
+          </div>
+
+          <!-- Error State -->
+          <div v-else-if="error" class="flex flex-col items-center justify-center py-12">
+            <img
+              src="/src/assets/images/icons/document-text-grey.svg"
+              class="size-[52px]"
+              alt="error"
+            />
+            <p class="font-semibold text-red-500 mt-4">{{ error }}</p>
+            <button @click="fetchProducts" class="btn btn-primary mt-4">Try Again</button>
+          </div>
+
+          <!-- Data List -->
+          <div v-else-if="filteredProducts.length > 0" class="flex flex-col gap-5">
             <template v-for="(product, index) in filteredProducts" :key="product.id">
               <div class="card flex items-center justify-between gap-3">
                 <div class="flex items-center gap-3 w-[380px] shrink-0">
                   <div
                     class="flex size-[86px] rounded-2xl bg-monday-background items-center justify-center overflow-hidden"
                   >
-                    <img :src="product.thumbnail" class="size-full object-contain" alt="icon" />
+                    <img
+                      :src="product.thumbnail || '/src/assets/images/icons/gallery-grey.svg'"
+                      class="size-full object-contain"
+                      alt="icon"
+                    />
                   </div>
                   <div class="flex flex-col gap-2 flex-1">
                     <p class="font-semibold text-xl w-[282px] truncate">{{ product.name }}</p>
@@ -51,7 +77,9 @@
                 </div>
                 <div class="flex items-center gap-[6px] min-w-[212px]">
                   <img :src="product.category?.photo" class="size-6 flex shrink-0" alt="icon" />
-                  <p class="font-semibold text-lg text-nowrap">{{ product.category?.name }}</p>
+                  <p class="font-semibold text-lg text-nowrap">
+                    {{ product.category?.name || 'No Category' }}
+                  </p>
                 </div>
                 <div class="flex items-center gap-4">
                   <button
@@ -79,10 +107,11 @@
               />
             </template>
           </div>
+
+          <!-- Empty State -->
           <div
             v-else
-            id="Empty-State"
-            class="hidden flex-col flex-1 items-center justify-center rounded-[20px] border-dashed border-2 border-monday-gray gap-6"
+            class="flex flex-col flex-1 items-center justify-center rounded-[20px] border-dashed border-2 border-monday-gray gap-6 py-12"
           >
             <img
               src="/src/assets/images/icons/document-text-grey.svg"
@@ -93,18 +122,36 @@
           </div>
         </div>
 
+        <!-- ✅ PAGINATION - Layout Sebelahan + Dropdown Limit -->
         <div
           v-if="filteredProducts.length > 0"
-          class="flex items-center justify-between px-[18px] py-4"
+          class="flex items-center justify-between px-[18px] py-4 border-t border-monday-border"
         >
-          <p class="font-medium text-monday-gray">
-            Showing {{ startIndex + 1 }}-{{ endIndex }} of {{ filteredProducts.length }} products
-          </p>
+          <!-- KIRI: Showing + Dropdown (SEBELAHAN) -->
+          <div class="flex items-center gap-4">
+            <p class="font-medium text-monday-gray">
+              Showing {{ startIndex + 1 }}-{{ endIndex }} of {{ filteredProducts.length }} products
+            </p>
+            <div class="flex items-center gap-2">
+              <select
+                v-model="itemsPerPage"
+                @change="onLimitChange"
+                class="px-3 py-2 rounded-xl border border-monday-border bg-white font-medium text-sm focus:outline-none focus:border-monday-blue cursor-pointer"
+              >
+                <option :value="5">5</option>
+                <option :value="10">10</option>
+                <option :value="20">20</option>
+                <option :value="50">50</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- KANAN: Pagination Buttons -->
           <div class="flex items-center gap-2">
             <button
               @click="previousPage"
               :disabled="currentPage === 1"
-              class="btn btn-primary-opacity font-semibold disabled:opacity-50 disabled:cursor-not-allowed"
+              class="btn btn-primary-opacity font-semibold disabled:opacity-50 disabled:cursor-not-allowed px-4 py-2"
             >
               Previous
             </button>
@@ -124,7 +171,7 @@
             <button
               @click="nextPage"
               :disabled="currentPage === totalPages"
-              class="btn btn-primary-opacity font-semibold disabled:opacity-50 disabled:cursor-not-allowed"
+              class="btn btn-primary-opacity font-semibold disabled:opacity-50 disabled:cursor-not-allowed px-4 py-2"
             >
               Next
             </button>
@@ -134,6 +181,7 @@
     </main>
   </Layout>
 
+  <!-- Modal -->
   <div
     v-if="showModal"
     class="modal flex flex-1 items-center justify-center h-full fixed top-0 left-0 w-full z-50"
@@ -156,8 +204,8 @@
         <div class="flex items-center justify-between">
           <div class="flex flex-col gap-2">
             <p class="flex items-center gap-[6px] font-semibold text-lg">
-              <img :src="selectedProduct.category.photo" class="size-6 flex shrink-0" alt="icon" />
-              {{ selectedProduct.category.name }}
+              <img :src="selectedProduct.category?.photo" class="size-6 flex shrink-0" alt="icon" />
+              {{ selectedProduct.category?.name || 'No Category' }}
             </p>
             <p class="font-bold text-lg">{{ selectedProduct.name }}</p>
             <p class="font-semibold text-[17px] text-monday-blue">
@@ -212,9 +260,18 @@ export default {
     const error = computed(() => productStore.error)
 
     const filteredProducts = computed(() => {
-      const data = products.value?.products?.data?.products
+      if (Array.isArray(products.value)) {
+        return products.value
+      }
 
-      return Array.isArray(data) ? data : []
+      if (
+        products.value?.products?.data?.products &&
+        Array.isArray(products.value.products.data.products)
+      ) {
+        return products.value.products.data.products
+      }
+
+      return []
     })
 
     const totalPages = computed(() => Math.ceil(filteredProducts.value.length / itemsPerPage.value))
@@ -268,6 +325,11 @@ export default {
       }
     }
 
+    // ✅ Ketika limit berubah, reset ke halaman 1
+    const onLimitChange = () => {
+      currentPage.value = 1
+    }
+
     const openModal = (product) => {
       selectedProduct.value = product
       showModal.value = true
@@ -279,7 +341,7 @@ export default {
     }
 
     const viewProduct = (id) => {
-      const product = products.value.find((p) => p.id === id)
+      const product = filteredProducts.value.find((p) => p.id === id)
       if (product) {
         openModal(product)
       }
@@ -307,6 +369,7 @@ export default {
       goToPage,
       nextPage,
       previousPage,
+      onLimitChange,
       openModal,
       closeModal,
       viewProduct,

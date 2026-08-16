@@ -24,7 +24,7 @@
           </div>
         </form>
         <div class="flex flex-col w-[392px] shrink-0 h-fit rounded-3xl p-[18px] gap-3 bg-white">
-          <p class="font-semibold">Quick Guide to Edit Role</p>
+          <p class="font-semibold text-lg">Quick Guide to Edit Role</p>
           <ul class="flex flex-col gap-4">
             <li class="flex gap-[6px]">
               <img
@@ -33,7 +33,7 @@
                 alt="icon"
               />
               <p class="font-medium leading-[140%]">
-                Modify the role name if necessary to ensure clarity and accurate
+                Update the role name if needed to ensure clarity and proper identification
               </p>
             </li>
             <li class="flex gap-[6px]">
@@ -43,8 +43,7 @@
                 alt="icon"
               />
               <p class="font-medium leading-[140%]">
-                Modify permissions as needed to ensure accurate access control and proper role
-                functionality lorem ipsum
+                Adjust role permissions to ensure accurate access control and proper functionality
               </p>
             </li>
             <li class="flex gap-[6px]">
@@ -64,7 +63,7 @@
                 alt="icon"
               />
               <p class="font-medium leading-[140%]">
-                Carefully review all changes before saving to ensure accuracy and prevent any errors
+                Review all changes carefully before saving to prevent errors
               </p>
             </li>
             <li class="flex gap-[6px]">
@@ -74,7 +73,7 @@
                 alt="icon"
               />
               <p class="font-medium leading-[140%]">
-                Avoid assigning duplicate roles to maintain clarity, prevent confusion
+                Avoid duplicate roles to maintain clarity and prevent confusion
               </p>
             </li>
           </ul>

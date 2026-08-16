@@ -74,7 +74,7 @@
           </div>
         </form>
         <div class="flex flex-col w-[392px] shrink-0 h-fit rounded-3xl p-[18px] gap-3 bg-white">
-          <p class="font-semibold">Quick Guide to Add User</p>
+          <p class="font-semibold text-lg">Quick Guide to Add User</p>
           <ul class="flex flex-col gap-4">
             <li class="flex gap-[6px]">
               <img
@@ -83,7 +83,7 @@
                 alt="icon"
               />
               <p class="font-medium leading-[140%]">
-                Enter user details accurately and dummy completely to ensure proper lorem ipsum
+                Fill in all user details accurately and completely
               </p>
             </li>
             <li class="flex gap-[6px]">
@@ -93,7 +93,7 @@
                 alt="icon"
               />
               <p class="font-medium leading-[140%]">
-                Assign a role if necessary to ensure proper access lorem ipsum
+                Assign an appropriate role to ensure proper access permissions
               </p>
             </li>
             <li class="flex gap-[6px]">
@@ -103,8 +103,7 @@
                 alt="icon"
               />
               <p class="font-medium leading-[140%]">
-                Create an initial password to ensure secure user access while maintaining account
-                protection
+                Create a strong initial password to secure the user account
               </p>
             </li>
             <li class="flex gap-[6px]">
@@ -114,7 +113,7 @@
                 alt="icon"
               />
               <p class="font-medium leading-[140%]">
-                Ensure Email and Phone Number Are Correct text lorem ipsum
+                Verify the email address and phone number are correct
               </p>
             </li>
             <li class="flex gap-[6px]">
@@ -124,8 +123,7 @@
                 alt="icon"
               />
               <p class="font-medium leading-[140%]">
-                Thoroughly review all details before creating to ensure accuracy and prevent
-                potential errors.
+                Review all information thoroughly before creating the user
               </p>
             </li>
           </ul>

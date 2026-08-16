@@ -102,7 +102,7 @@
           </form>
         </div>
         <div class="flex flex-col w-[392px] shrink-0 h-fit rounded-3xl p-[18px] gap-3 bg-white">
-          <p class="font-semibold">Quick Guide to Assign Products</p>
+          <p class="font-semibold text-lg">Quick Guide to Assign Products to Merchant</p>
           <ul class="flex flex-col gap-4">
             <li class="flex gap-[6px]">
               <img
@@ -111,7 +111,7 @@
                 alt="icon"
               />
               <p class="font-medium leading-[140%]">
-                Ensure the warehouse has enough capacity lorem ipsum
+                Ensure the merchant has enough capacity to accommodate the products
               </p>
             </li>
             <li class="flex gap-[6px]">
@@ -121,7 +121,7 @@
                 alt="icon"
               />
               <p class="font-medium leading-[140%]">
-                Double-check product details to avoid mismatches dummy text ipsum
+                Double-check product details to avoid mismatches or errors
               </p>
             </li>
             <li class="flex gap-[6px]">
@@ -131,7 +131,7 @@
                 alt="icon"
               />
               <p class="font-medium leading-[140%]">
-                Keep stock levels updated to prevent overselling lorem si ipsum text simply
+                Keep stock levels updated to prevent overselling or shortages
               </p>
             </li>
             <li class="flex gap-[6px]">
@@ -141,7 +141,7 @@
                 alt="icon"
               />
               <p class="font-medium leading-[140%]">
-                Regularly review assigned products for accuracy text dummy lorem ipsum
+                Regularly review assigned products to ensure accuracy and relevance
               </p>
             </li>
             <li class="flex gap-[6px]">
@@ -151,7 +151,7 @@
                 alt="icon"
               />
               <p class="font-medium leading-[140%]">
-                Communicate with the warehouse team for smooth operations
+                Communicate with the merchant team for smooth operations
               </p>
             </li>
           </ul>

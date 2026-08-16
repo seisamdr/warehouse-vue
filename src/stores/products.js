@@ -36,7 +36,38 @@ export const useProductStore = defineStore('products', {
 
       try {
         const response = await getProducts()
-        this.products = response.data?.products || response || []
+
+        // ✅ Normalisasi: Pastikan products selalu array
+        let productsData = []
+
+        // Cek struktur response
+        if (response?.data?.products) {
+          // Jika response.data.products adalah array
+          if (Array.isArray(response.data.products)) {
+            productsData = response.data.products
+          }
+          // Jika response.data.products adalah object dengan data.products
+          else if (response.data.products?.data?.products) {
+            productsData = Array.isArray(response.data.products.data.products)
+              ? response.data.products.data.products
+              : []
+          }
+          // Jika response.data.products adalah object biasa
+          else if (typeof response.data.products === 'object') {
+            productsData = []
+          }
+        }
+        // Jika response.data langsung array
+        else if (Array.isArray(response.data)) {
+          productsData = response.data
+        }
+        // Jika response langsung array
+        else if (Array.isArray(response)) {
+          productsData = response
+        }
+
+        this.products = productsData
+        console.log('✅ Products loaded:', this.products.length)
       } catch (error) {
         console.error('Error fetching products:', error)
         this.error = error.message || 'Gagal mengambil data produk'
@@ -52,8 +83,17 @@ export const useProductStore = defineStore('products', {
 
       try {
         const response = await createProduct(productData)
-        this.products.push(response.data || response)
-        return response.data || response
+        const newProduct = response.data || response
+
+        // ✅ Cek apakah products adalah array
+        if (Array.isArray(this.products)) {
+          this.products.push(newProduct)
+        } else {
+          // Kalo bukan array, buat array baru
+          this.products = [newProduct]
+        }
+
+        return newProduct
       } catch (error) {
         console.error('Error creating product:', error)
         this.error = error.message || 'Gagal membuat produk'

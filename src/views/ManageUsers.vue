@@ -20,7 +20,7 @@
             Add New
             <img
               src="/src/assets/images/icons/add-square-white.svg"
-              class="flex sixe-6 shrink-0"
+              class="flex size-6 shrink-0"
               alt="icon"
             />
           </router-link>
@@ -30,6 +30,7 @@
           <div class="flex items-center justify-between">
             <p class="font-semibold text-xl">All Users</p>
           </div>
+
           <!-- Loading State -->
           <div v-if="loading" class="flex flex-col items-center justify-center py-12">
             <img
@@ -51,8 +52,9 @@
             <button @click="fetchUsers()" class="btn btn-primary mt-4">Try Again</button>
           </div>
 
+          <!-- Data List -->
           <div v-else-if="users.length > 0" class="flex flex-col gap-5">
-            <template v-for="user in users" :key="user.id">
+            <template v-for="(user, index) in users" :key="user.id">
               <div class="card flex items-center justify-between gap-6">
                 <div class="flex items-center gap-3">
                   <div
@@ -72,7 +74,7 @@
                         class="size-6 flex shrink-0"
                         alt="icon"
                       />
-                      <span>{{ user.phone }}</span>
+                      <span>{{ user.phone || '-' }}</span>
                     </p>
                   </div>
                 </div>
@@ -88,7 +90,9 @@
                   </div>
                   <div class="flex flex-col gap-1">
                     <p class="font-medium text-sm text-monday-gray">User Role:</p>
-                    <p class="font-semibold text-lg text-nowrap">{{ user.role_name }}</p>
+                    <p class="font-semibold text-lg text-nowrap">
+                      {{ user.role_name || 'No Role' }}
+                    </p>
                   </div>
                 </div>
                 <router-link
@@ -105,57 +109,92 @@
               </div>
               <hr v-if="index < users.length - 1" class="border-monday-border last:hidden" />
             </template>
+          </div>
 
-            <div v-if="totalPages > 1" class="flex items-center justify-center gap-4 mt-6">
-              <button
-                @click="goToPage(currentPage - 1)"
-                :disabled="!hasPrev"
-                class="btn btn-outline px-4 py-2 disabled:opacity-50 disabled:cursor-not-allowed"
+          <!-- Empty State -->
+          <div
+            v-else
+            class="flex flex-col flex-1 items-center justify-center rounded-[20px] border-dashed border-2 border-monday-gray gap-6 py-12"
+          >
+            <img
+              src="/src/assets/images/icons/document-text-grey.svg"
+              class="size-[52px]"
+              alt="icon"
+            />
+            <p class="font-semibold text-monday-gray">Oops, it looks like there's no data yet.</p>
+          </div>
+        </div>
+
+        <!-- ✅ PAGINATION - Layout Sebelahan + Dropdown Limit -->
+        <div
+          v-if="users.length > 0"
+          class="flex items-center justify-between px-[18px] py-4 border-t border-monday-border"
+        >
+          <!-- KIRI: Showing + Dropdown (SEBELAHAN) -->
+          <div class="flex items-center gap-4">
+            <p class="font-medium text-monday-gray">
+              Showing {{ startIndex + 1 }}-{{ endIndex }} of {{ totalRecords }} users
+            </p>
+            <div class="flex items-center gap-2">
+              <select
+                v-model="limit"
+                @change="onLimitChange"
+                class="px-3 py-2 rounded-xl border border-monday-border bg-white font-medium text-sm focus:outline-none focus:border-monday-blue cursor-pointer"
               >
-                Previous
-              </button>
-
-              <div class="flex items-center gap-2">
-                <button
-                  v-for="page in totalPages"
-                  :key="page"
-                  @click="goToPage(page)"
-                  :class="[
-                    'px-3 py-1 rounded-lg font-medium transition-300',
-                    currentPage === page
-                      ? 'bg-monday-blue text-white'
-                      : 'bg-monday-gray-background text-monday-gray hover:bg-monday-blue/10',
-                  ]"
-                >
-                  {{ page }}
-                </button>
-              </div>
-
-              <button
-                @click="goToPage(currentPage + 1)"
-                :disabled="!hasNext"
-                class="btn btn-outline px-4 py-2 disabled:opacity-50 disabled:cursor-not-allowed"
-              >
-                Next
-              </button>
+                <option :value="5">5</option>
+                <option :value="10">10</option>
+                <option :value="20">20</option>
+                <option :value="50">50</option>
+              </select>
             </div>
+          </div>
+
+          <!-- KANAN: Pagination Buttons -->
+          <div class="flex items-center gap-2">
+            <button
+              @click="goToPage(currentPage - 1)"
+              :disabled="!hasPrev"
+              class="btn btn-primary-opacity font-semibold disabled:opacity-50 disabled:cursor-not-allowed px-4 py-2"
+            >
+              Previous
+            </button>
+            <button
+              v-for="page in totalPages"
+              :key="page"
+              @click="goToPage(page)"
+              :class="[
+                'px-4 py-2 rounded-2xl font-semibold transition-300',
+                page === currentPage
+                  ? 'bg-monday-blue text-white'
+                  : 'bg-monday-gray-background text-monday-gray hover:bg-monday-border',
+              ]"
+            >
+              {{ page }}
+            </button>
+            <button
+              @click="goToPage(currentPage + 1)"
+              :disabled="!hasNext"
+              class="btn btn-primary-opacity font-semibold disabled:opacity-50 disabled:cursor-not-allowed px-4 py-2"
+            >
+              Next
+            </button>
           </div>
         </div>
       </section>
     </main>
   </Layout>
 </template>
+
 <script>
 import Layout from '@/components/Layout.vue'
 import { getUsers } from '@/js/api/users'
-import { onMounted, ref } from 'vue'
+import { computed, onMounted, ref, watch } from 'vue'
 
 export default {
   name: 'ManageUsers',
   components: {
     Layout,
   },
-
   setup() {
     const users = ref([])
     const loading = ref(false)
@@ -164,9 +203,17 @@ export default {
     const currentPage = ref(1)
     const totalPages = ref(1)
     const totalRecords = ref(0)
-    const limit = ref(10)
+    const limit = ref(5)
     const hasNext = ref(false)
     const hasPrev = ref(false)
+
+    const startIndex = computed(() => {
+      return (currentPage.value - 1) * limit.value
+    })
+
+    const endIndex = computed(() => {
+      return Math.min(startIndex.value + limit.value, totalRecords.value)
+    })
 
     const fetchUsers = async (page = 1) => {
       loading.value = true
@@ -180,16 +227,26 @@ export default {
 
         const response = await getUsers(`?${params.toString()}`)
 
-        users.value = response.data.users
-        currentPage.value = response.data.pagination.current_page
-        totalPages.value = response.data.pagination.total_pages
-        totalRecords.value = response.data.pagination.total_records
-        limit.value = response.data.pagination.limit
-        hasNext.value = response.data.pagination.has_next
-        hasPrev.value = response.data.pagination.has_prev
+        const data = response.data?.data || response.data || response
+        users.value = data.users || []
+
+        if (data.pagination) {
+          currentPage.value = data.pagination.current_page
+          totalPages.value = data.pagination.total_pages
+          totalRecords.value = data.pagination.total_records
+          limit.value = data.pagination.limit || limit.value
+          hasNext.value = data.pagination.has_next
+          hasPrev.value = data.pagination.has_prev
+        }
+
+        console.log('✅ Users loaded:', users.value.length)
+        console.log('✅ Total Pages:', totalPages.value)
+        console.log('✅ Total Records:', totalRecords.value)
+        console.log('✅ Limit:', limit.value)
       } catch (error) {
         console.error('Error fetching users:', error)
         error.value = error.message || 'Failed to fetch users'
+        users.value = []
       } finally {
         loading.value = false
       }
@@ -199,6 +256,12 @@ export default {
       if (page >= 1 && page <= totalPages.value) {
         fetchUsers(page)
       }
+    }
+
+    // ✅ Ketika limit berubah, reset ke halaman 1
+    const onLimitChange = () => {
+      currentPage.value = 1
+      fetchUsers(1)
     }
 
     onMounted(() => {
@@ -216,6 +279,9 @@ export default {
       hasNext,
       hasPrev,
       goToPage,
+      startIndex,
+      endIndex,
+      onLimitChange,
     }
   },
 }
